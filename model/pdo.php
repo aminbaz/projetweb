@@ -3,12 +3,15 @@ function connexion()
 {
 	try
 	{
-		$bd = pg_connect("host=localhost port=5432 dbname=centre");
+		$pseudo='postgres';
+		$password='postgres';
+		$pdo = new PDO('pgsql:host=localhost;dbname=centre',$pseudo,$password);
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	}
 	catch (Exception $e)
 	{
 			die('Erreur : ' . $e->getMessage());
 	}
-	return($bd);
+	return($pdo);
 }
 ?>
