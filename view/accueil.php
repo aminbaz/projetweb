@@ -1,7 +1,7 @@
 <!doctype html> 
 <html lang="fr"> 
   <head> 
-    <title>Accueil Test Riasec</title> 
+    <title>Accueil centre</title> 
     <meta name="Content-Type" content="UTF-8"> 
     <meta name="Content-Language" content="fr"> 
     <meta name="Description" content="Gestion d'un centre social "> 
@@ -18,8 +18,9 @@
           <div class="nav-wrapper"> 
             <a href="#" class="brand-logo">CENTRE SOCIAL DE NAILLAC</a> 
             <ul id="nav-mobile" class="right hide-on-med-and-down"> 
-              <li><a href="sass.html">Connexion</a></li> 
-              <li><a href="badges.html">Inscription</a></li> 
+              <li><a href="">CONNEXION</a></li> 
+              <li><a href="Inscription.php">INSCRIPTION</a></li> 
+              <li><a href="">ACTIVITE</a></li> 
             </ul> 
           </div> 
       </nav>  

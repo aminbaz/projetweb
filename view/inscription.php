@@ -1,7 +1,7 @@
 <!doctype html> 
 <html lang="fr"> 
   <head> 
-    <title>Accueil Test Riasec</title> 
+    <title>Inscription centre</title> 
     <meta name="Content-Type" content="UTF-8"> 
     <meta name="Content-Language" content="fr"> 
     <meta name="Description" content="Gestion d'un centre social "> 
@@ -10,14 +10,14 @@
     <meta name="Author" content="Amin BAZAZ"> 
       <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
       <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"> 
-      <link rel="stylesheet" href="C:\Users\amin\Desktop\Web\css\materialize\css\materialize.css"> 
+      <link rel="stylesheet" href="css/materialize/css/materialize.css"> 
   </head> 
  
   <body> 
        <div class="container"> 
       <h5 class="center-align">Inscription</h5> 
       <div class="row z-depth-4 blue-grey lighten-5"> 
-        <form class="col s12" method="post" action="/controller/Controller_Inscription.php"> 
+        <form class="col s12" method="post" action="controller/Controller_Inscription.php"> 
           <div class="row"> 
             <div class="input-field col s9"> 
               <input id="nom" name="nom" type="text" class="validate"> 
@@ -35,7 +35,13 @@
               <input id="sexe" name="sexe" type="text" class="validate"> 
               <label for="sexe" data-error="wrong" data-success="right">Sexe</label> 
             </div> 
-          </div>       
+          </div> 
+          <div class="row"> 
+            <div class="input-field col s9"> 
+              <input id="dateNaiss" name="dateNaiss" type="date" class="validate"> 
+              <label for="dateNaiss" data-error="wrong" data-success="right">Date de naissance</label> 
+            </div> 
+          </div>        
           <div class="row"> 
             <div class="input-field col s9"> 
               <input id="email" name="email" type="email" class="validate"> 
