@@ -15,7 +15,7 @@
  
   <body> 
        <nav> 
-          <div class="nav-wrapper"> 
+          <div class="nav-wrapper nav-extended"> 
             <a href="#" class="brand-logo">CENTRE SOCIAL DE NAILLAC</a> 
             <ul id="nav-mobile" class="right hide-on-med-and-down"> 
               <li><a href="">CONNEXION</a></li> 
@@ -24,5 +24,32 @@
             </ul> 
           </div> 
       </nav>  
+
+
+<section class="blue">
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+
+      <div class="col s12 center">
+          <h3><i class="mdi-content-send "></i></h3>
+
+          <h4 class ="white-text"><i class="material-icons">flash_on</i>Présentation</h4>
+          <p class="left-align light white-text"> Nice DRIVER est un service personnalisé de location de voiture haut de gamme avec chauffeur privé.
+          Situé à Nice, au coeur de la cote d'Azur.
+          De Paris à Monaco, nos chauffeurs bilingues vous accompagnent dans tous vos déplacements d’affaires ou d’ordre privés.
+          Nous mettons à disposition des véhicules de luxe de type limousine, berline et mini-van.</p>
+        </div>
+       
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
   </body> 
 </html>

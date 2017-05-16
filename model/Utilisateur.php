@@ -49,7 +49,7 @@
 				$req->execute();
 				$data=$req->fetch();
 
-				return ($data['mail']);
+				return ($data);
 			}
 
 			public static function Add_Utilisateur($nom,$prenom,$sexe,$datenaiss,$mail)
