@@ -18,7 +18,7 @@
           <div class="nav-wrapper nav-extended"> 
             <a href="#" class="brand-logo">CENTRE SOCIAL DE NAILLAC</a> 
             <ul id="nav-mobile" class="right hide-on-med-and-down"> 
-              <li><a href="">CONNEXION</a></li> 
+              <li><a href="Connexion.php">CONNEXION</a></li> 
               <li><a href="Inscription.php">INSCRIPTION</a></li> 
               <li><a href="">ACTIVITE</a></li> 
             </ul> 

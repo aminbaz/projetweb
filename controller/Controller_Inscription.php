@@ -27,7 +27,7 @@
 		
 		header("Location: ../Erreur.php?erreur=".$messageErreur);
 	}
-	elseif (!(filter_var($mail, FILTER_VALIDATE_mail))) {
+	elseif (!(filter_var($mail, FILTER_VALIDATE_EMAIL))) {
 		$messageErreur = "Votre mail n'est pas valide  ! ";
 		
 		header("Location: ../Erreur.php?erreur=".$messageErreur);

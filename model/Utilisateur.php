@@ -15,7 +15,7 @@
 				$req->execute();
 				$data=$req->fetch();
 
-				return ($data['User_Password']==$userPassword);
+				return ($data['mdp']==$userPassword);
 		
 			}
 
@@ -28,7 +28,7 @@
 				$bd=connexion();
 
 
-				$req = $bd->prepare("SELECT id_utilisateur FROM utilisateur WHERE mail='".$$userMail."'");
+				$req = $bd->prepare("SELECT id_utilisateur FROM utilisateur WHERE mail='".$userMail."'");
 
 				$req->execute();
 				$data=$req->fetch();
@@ -52,7 +52,7 @@
 				return ($data);
 			}
 
-			public static function Add_Utilisateur($nom,$prenom,$sexe,$datenaiss,$mail)
+			public static function Add_Utilisateur($nom,$prenom,$sexe,$datenaiss,$mail,$mdp)
 			//User_Gender x User_Name x User_First_Name x User_Password x User_Mail =>
 			//données : $gender string correspondant au sexe de l'utilisateur à ajouter, $name string correspondant au nom de l'utilisateur, $firstName string correspondant au prénom de l'utilisateur, $password string correspondant au mot de passe de l'utilisateur, $mail string correspondant au mail de l'utilisateur
 			//résultat : modifie la base de données en ajoutant une entité à la classe "User" en fonction des données entrées
@@ -60,12 +60,13 @@
 				require_once('Pdo.php');
 				$bd=connexion();
 
-				$req = $bd->prepare('INSERT INTO utilisateur(nom, prenom, sexe, date_naiss, mail) VALUES (:nom, :prenom,:sexe,:datenaiss,:mail)');
+				$req = $bd->prepare('INSERT INTO utilisateur(nom, prenom, sexe, date_naiss, mail, mdp) VALUES (:nom, :prenom,:sexe,:datenaiss,:mail, :mdp)');
 				$req->bindParam(':nom',$nom);
 				$req->bindParam(':prenom',$prenom);
 				$req->bindParam(':sexe',$sexe);
 				$req->bindParam(':datenaiss',$datenaiss);
 				$req->bindParam(':mail',$mail);
+				$req->bindParam(':mdp',$mdp);
 
 				$req->execute();
 			}
