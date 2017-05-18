@@ -10,10 +10,18 @@
     <meta name="Author" content="Amin BAZAZ"> 
       <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
       <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"> 
-      <link rel="stylesheet" href="css/materialize/css/materialize.css"> 
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+      <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+  
+          
   </head> 
  
   <body> 
+  <?php require ("view/entete.php");?>
        <div class="container"> 
       <h5 class="center-align">Inscription</h5> 
       <div class="row z-depth-4 blue-grey lighten-5"> 
@@ -68,5 +76,13 @@
         </form> 
       </div> 
     </div> 
+  <script>$(document).ready(function() {
+    Materialize.updateTextFields();
+  });
+  </script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
   </body> 
 </html>

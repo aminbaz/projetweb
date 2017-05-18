@@ -1,6 +1,19 @@
 <?php
 	class Utilisateur
 		{
+			public static function Get_User($userId){
+				require_once('Pdo.php');
+				$bd=connexion();
+
+				$req = $bd->prepare("SELECT * FROM utilisateur WHERE id_utilisateur = :userId");
+				$req->bindParam(':userId',$userId);
+
+				$req->execute();
+				$data=$req->fetch();
+
+				return $data; //Verifier si null
+			}
+
 			public static function Check_Password($userPassword,$userMail)
 			//User_Password x User_Mail => bool
 			//données : $userPassword string correspondant au mot de passe utilisateur, $userMail string correspondant au mail de l'utilisateur
@@ -59,14 +72,81 @@
 			{
 				require_once('Pdo.php');
 				$bd=connexion();
-
-				$req = $bd->prepare('INSERT INTO utilisateur(nom, prenom, sexe, date_naiss, mail, mdp) VALUES (:nom, :prenom,:sexe,:datenaiss,:mail, :mdp)');
+				$age = (time() - strtotime($datenaiss)) / 3600 / 24 / 365;
+				if ($age < 11) {
+					$categorie = 1;
+				}
+				elseif ($age < 16) {
+					$categorie = 2;
+				}
+				elseif ($age < 21) {
+					$categorie = 3;
+				}
+				else{
+					$categorie = 4;
+				}
+				$req = $bd->prepare('INSERT INTO utilisateur(nom, prenom, sexe, date_naiss, mail, mdp, id_categorie, id_role) VALUES (:nom, :prenom,:sexe,:datenaiss,:mail, :mdp, :categorie,1)');
 				$req->bindParam(':nom',$nom);
 				$req->bindParam(':prenom',$prenom);
 				$req->bindParam(':sexe',$sexe);
 				$req->bindParam(':datenaiss',$datenaiss);
 				$req->bindParam(':mail',$mail);
 				$req->bindParam(':mdp',$mdp);
+				$req->bindParam(':categorie',$categorie);
+
+				$req->execute();
+			}
+
+			public static function Set_User_Role($userId,$roleId)
+			{
+				require_once('Pdo.php');
+				$bd=connexion();
+
+				$req = $bd->prepare("UPDATE Utilisateur SET id_role =:roleId WHERE id_utilisateur=:userId");
+				$req->bindParam(':roleId',$roleId);
+				$req->bindParam(':userId',$userId);
+				
+				$req->execute();
+			}
+
+			public static function Get_User_Role($userId)
+			//User_Id => Role_Id
+			//données : $userId int correspondant à l'identifiant de l'utilisateur
+			//résultat : int correspondant à l'id du rôle de l'utilisateur
+			{
+				require_once('Pdo.php');
+				$bd=connexion();
+
+				$req = $bd->prepare("SELECT id_role FROM utilisateur WHERE id_utilisateur = :userId");
+				$req->bindParam(':userId',$userId);
+				$req->execute();
+				$data=$req->fetch();
+				
+				return $data["id_role"];
+			}
+
+			public static function Update_User($id,$name,$firstName,$gender,$datenaiss){
+				require_once('Pdo.php');
+				$bd=connexion();
+
+				$req = $bd->prepare('UPDATE Utilisateur set nom=:name, prenom=:firstname, sexe=:gender, date_naiss=:datenaiss where id_utilisateur=:id');
+				$req->bindParam(':id',$id);
+				$req->bindParam(':name',$name);
+				$req->bindParam(':firstname',$firstName);
+				$req->bindParam(':gender',$gender);
+				$req->bindParam(':datenaiss',$datenaiss);
+				
+
+				$req->execute();
+			}
+
+			public static function Update_Password($id,$mdp){
+				require_once('Pdo.php');
+				$bd=connexion();
+
+				$req = $bd->prepare('UPDATE Utilisateur set mdp=:mdp where id_utilisateur=:id');
+				$req->bindParam(':mdp',$mdp);
+				$req->bindParam(':id',$id);
 
 				$req->execute();
 			}

@@ -12,7 +12,7 @@
       <SCRIPT type="text/javascript" src="jquery.js"></SCRIPT>
 <SCRIPT type="text/javascript" src="script.js"></SCRIPT>
 
-    <title>Accueil centre</title> 
+    <title>Profil</title> 
     <meta name="Content-Type" content="UTF-8"> 
     <meta name="Content-Language" content="fr"> 
     <meta name="Description" content="Gestion d'un centre social "> 
@@ -24,11 +24,21 @@
   </head> 
  
   <body> 
-  <?php require ("view/entete.php");?>
 
+    <?php require ("view/entete.php");?>
+      <div class="container">
+        <ul class="collection with-header">
+            <li class="collection-header"><h4>Vos informations</h4></li>
+            <li class="collection-item"><?php echo $information['nom']; ?></li>
+            <li class="collection-item"><?php echo $information['prenom']; ?></li>
+            <li class="collection-item"><?php echo $information['sexe']; ?></li>
+            <li class="collection-item"><?php echo $information['date_naiss'] ?></li>
+            <li class="collection-item"><?php echo $information['mail'] ?></li>
+        </ul>
+      </div>
 
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <div class="input-field col s9">
+              <a class="btn waves-effect waves-light" href="Modification_Mot_De_Passe.php">Modifier mon mot de passe ?</a>
+      </div>
   </body> 
 </html>

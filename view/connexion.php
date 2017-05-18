@@ -10,9 +10,12 @@
     <meta name="Author" content="Amin BAZAZ"> 
       <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
       <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"> 
-      <link rel="stylesheet" href="css/materialize/css/materialize.css"> 
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
   </head> 
   <body>
+  <?php require ("view/entete.php");?>
     <div class="container">
       <h5 class="center-align">Saisir vos identifiants</h5>
       <div class="row z-depth-4 blue-grey lighten-5">

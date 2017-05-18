@@ -1,6 +1,6 @@
 <?php
-//require_once ("controller/Controller_Test_User.php");
-//offlineOnly();
+require ("controller/Controller_Test_Connexion.php");
+offlineOnly();
 
 require "view/inscription.php";
 ?>

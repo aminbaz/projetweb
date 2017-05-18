@@ -22,9 +22,9 @@ else
 	if(Utilisateur::Check_Password($mdp,$mail))
 	{
 
-		setcookie("codeconnexion", $cookiecode, time()+(500), "/");
+		setcookie("codeconnexion", $cookiecode, time()+(3600), "/");
 
-		header("Location: ../Espace.php");
+		header("Location: ../Accueil.php");
 	}
 	else
 	{

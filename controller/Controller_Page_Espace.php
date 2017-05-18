@@ -1,9 +1,9 @@
 <?php
-
+require ("controller/Controller_Test_Connexion.php");
+onlineOnly();
 require_once ("model/Utilisateur.php");
 
-$cookieMail = $_COOKIE['codeconnexion'];
-$userId = Utilisateur::Get_User_Id($cookieMail);
+$cookieId = $_COOKIE['codeconnexion'];
 
 require "view/espace.php";
 ?>
