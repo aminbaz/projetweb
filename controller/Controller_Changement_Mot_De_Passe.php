@@ -34,7 +34,7 @@
 		$password = sha1(sha1($password));
 		Utilisateur::Update_Password($cookieId,$password);
 		setcookie("codeconnexion","", time() , "/");
-		header("Location: ../Accueil.php");
+		header("Location: ../Connexion.php");
 	}
 	
 ?>
