@@ -71,51 +71,6 @@
       </div>
     </div>
 
-    <div class="container">
-      <h5 class="center-align">Créer une activité</h5>
-      <div class="row z-depth-4 blue-grey lighten-5">
-        <form class="col s12" method="post" action="controller/Controller_Ajout_Activite.php">          
-          <div class="row">
-            <div class="input-field col s9">
-              <input id="nom" name="nom" type="text" class="validate">
-              <label for="nom" data-error="wrong" data-success="right">Intitulé activité</label>
-            </div>
-          </div>
-           <div class="row">
-            <div class="input-field col s9">
-              <input id="dateactivite" name="dateactivite" type="date" class="validate">
-              <label for="dateactivite" data-error="wrong" data-success="right">Date</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s9">
-              <input id="description" name="description" type="text" class="validate">
-              <label for="description" data-error="wrong" data-success="right">Description</label>
-            </div>
-          </div>
-           <div class="row">
-            <div class="input-field col s9">
-              <input id="prix" name="prix" type="number" class="validate">
-              <label for="prix" data-error="wrong" data-success="right">Prix</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s9">
-              <input id="typeactivite" name="typeactivite" type="text" class="validate">
-              <label for="typeactivite" data-error="wrong" data-success="right">Type</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s9">
-              <button class="btn waves-effect waves-light" type="submit" name="action" value="valider">Ajouter</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-
-
-
 <?php ;}?>
   </body>
 </html>

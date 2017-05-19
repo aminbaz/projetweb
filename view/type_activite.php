@@ -25,15 +25,16 @@
  
   <body> 
   <?php require ("view/entete.php");?>
+   <?require ("controller/Controller_Test_Connexion.php");?>
   <div class="container"> 
-    <table class="bordered striped highlight centered responsive-table">
+    <table class="bordered highlight centered ">
         <thead>
           <tr>
               <th>Activité</th>
               <th>Date</th>
               <th>Description</th>
               <th>Prix</th>
-              <th>Modifier</th>
+              <th><?php if (isAdmin()){echo "Modifier";}else{ echo "S'inscrire";}?></th>
           </tr>
         </thead>
 
@@ -45,7 +46,10 @@
                 echo "<td> $ligne[date_activite]</td>";
                 echo "<td> $ligne[description]</td>";
                 echo "<td> $ligne[prix]</td>";
-              echo "</tr>";
+                echo "<td> <a href='Inscription_Activite.php?id_activite=$ligne[id_activite]'>";
+                if (isAdmin()){echo "Modifier";}else{ echo "S'inscrire";}
+                echo "</a></td>";
+             echo "</tr>";
             }
           ?>
         </tbody>
