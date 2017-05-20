@@ -125,6 +125,71 @@
 				return $data["id_role"];
 			}
 
+			public static function Get_User_Categorie($userId)
+			//User_Id => Role_Id
+			//données : $userId int correspondant à l'identifiant de l'utilisateur
+			//résultat : int correspondant à l'id du rôle de l'utilisateur
+			{
+				require_once('Pdo.php');
+				$bd=connexion();
+
+				$req = $bd->prepare("SELECT id_categorie FROM utilisateur WHERE id_utilisateur = :userId");
+				$req->bindParam(':userId',$userId);
+				$req->execute();
+				$data=$req->fetch();
+				
+				return $data["id_categorie"];
+			}
+
+			public static function Get_Activite_Adherent($userId)
+			//User_Id => Role_Id
+			//données : $userId int correspondant à l'identifiant de l'utilisateur
+			//résultat : int correspondant à l'id du rôle de l'utilisateur
+			{
+				require_once('Pdo.php');
+				$bd=connexion();
+
+				$req = $bd->prepare("SELECT A.id_activite, A.nom_activite, A.description, A.prix, A.date_activite FROM activite A, inscrire I, utilisateur U WHERE A.id_activite = I.id_activite and I.id_utilisateur = U.id_utilisateur and U.id_utilisateur = :userId ");
+				$req->bindParam(':userId',$userId);
+				$req->execute();
+				
+				return $req;
+			}
+
+			public static function Get_Activite_Animateur($userId)
+			//User_Id => Role_Id
+			//données : $userId int correspondant à l'identifiant de l'utilisateur
+			//résultat : int correspondant à l'id du rôle de l'utilisateur
+			{
+				require_once('Pdo.php');
+				$bd=connexion();
+
+				$req = $bd->prepare("SELECT A.id_activite, A.nom_activite, A.description, A.prix, A.date_activite FROM activite A, encadrer E, utilisateur U WHERE A.id_activite = E.id_activite and E.id_utilisateur = U.id_utilisateur and U.id_utilisateur = :userId ");
+				$req->bindParam(':userId',$userId);
+				$req->execute();
+				
+				return $req;
+			}
+
+
+			public static function Get_Responsable_Activite($idActivite)
+			//User_Id => Role_Id
+			//données : $userId int correspondant à l'identifiant de l'utilisateur
+			//résultat : int correspondant à l'id du rôle de l'utilisateur
+			{
+				require_once('Pdo.php');
+				$bd=connexion();
+
+				$req = $bd->prepare("SELECT * FROM activite A, encadrer E, utilisateur U WHERE A.id_activite = E.id_activite and E.id_utilisateur = U.id_utilisateur and A.id_activite = :idActivite ");
+				$req->bindParam(':idActivite',$idActivite);
+				$req->execute();
+				$data=$req->fetch();
+				
+				return $data;
+			}
+
+
+
 			public static function Update_User($id,$name,$firstName,$gender,$datenaiss){
 				require_once('Pdo.php');
 				$bd=connexion();

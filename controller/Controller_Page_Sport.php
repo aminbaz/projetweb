@@ -3,10 +3,14 @@
 	onlineOnly();
 
 	require_once ('/model/Activite.php');
+	require_once ('/model/Utilisateur.php');
 	
 
 	$cookieId = $_COOKIE['codeconnexion'];
 	$information = Activite::Get_Activite_Type(1);
+	$categorie = Utilisateur::Get_User_Categorie($cookieId);
+	
+
 	
 	require "view/type_activite.php";
 ?>

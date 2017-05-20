@@ -25,13 +25,16 @@ class Activite
 
 				return $req; //Verifier si null
 			}
+
 	
-	public static function Add_Activite($nom,$date,$description,$prix,$type)
+	
+	public static function Add_Activite($nom,$date,$description,$prix,$type,$cat)
 				//User_Gender x User_Name x User_First_Name x User_Password x User_Mail =>
 				//données : $gender string correspondant au sexe de l'utilisateur à ajouter, $name string correspondant au nom de l'utilisateur, $firstName string correspondant au prénom de l'utilisateur, $password string correspondant au mot de passe de l'utilisateur, $mail string correspondant au mail de l'utilisateur
 				//résultat : modifie la base de données en ajoutant une entité à la classe "User" en fonction des données entrées
 				{
 					require_once('Pdo.php');
+
 					$bd=connexion();
  
 					if ($type == "sport") {
@@ -49,13 +52,38 @@ class Activite
 					else{
 						$codetype = 5;
 					}
+
+
+					if ($cat == "-10") {
+						$categorie = 1;
+					}
+					elseif ($cat == "-15") {
+						$categorie = 2;
+					}
+					elseif ($cat == "-20") {
+						$categorie = 3;
+					}
+					elseif ($cat == "+21"){
+						$categorie = 4;
+					}
+					else{
+						$categorie = 5;
+					}
+
+					if (empty($prix)) {
+						$codeprix = 0;
+					}
+					else{
+						$codeprix = $prix;
+					}
 					
-					$req = $bd->prepare('INSERT INTO activite(nom_activite, description, prix, id_type, date_activite) VALUES (:nom, :description,:prix,:codetype,:dateActivite)');
+					$req = $bd->prepare('INSERT INTO activite(nom_activite, description, prix, id_type, date_activite, id_categorie) VALUES (:nom, :description,:codeprix,:codetype,:dateActivite,:categorie)');
 					$req->bindParam(':nom',$nom);
 					$req->bindParam(':dateActivite',$date);
 					$req->bindParam(':description',$description);
-					$req->bindParam(':prix',$prix);
+					$req->bindParam(':codeprix',$codeprix);
 					$req->bindParam(':codetype',$codetype);
+					$req->bindParam(':categorie',$categorie);
 
 					$req->execute();
 				}	
@@ -75,6 +103,21 @@ class Activite
 					
 
 					$req->execute();
-				}		
+				}	
+
+	public static function Delete_Activite($id)
+				//User_Gender x User_Name x User_First_Name x User_Password x User_Mail =>
+				//données : $gender string correspondant au sexe de l'utilisateur à ajouter, $name string correspondant au nom de l'utilisateur, $firstName string correspondant au prénom de l'utilisateur, $password string correspondant au mot de passe de l'utilisateur, $mail string correspondant au mail de l'utilisateur
+				//résultat : modifie la base de données en ajoutant une entité à la classe "User" en fonction des données entrées
+				{
+					require_once('Pdo.php');
+					$bd=connexion();
+					
+					$req = $bd->prepare('DELETE FROM activite WHERE id_activite=:id');
+
+					$req->bindParam(':id',$id);
+
+					$req->execute();
+				}	
 }
 ?>

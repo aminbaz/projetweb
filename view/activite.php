@@ -65,13 +65,19 @@
            <div class="row">
             <div class="input-field col s9">
               <input id="prix" name="prix" type="number" class="validate">
-              <label for="prix" data-error="wrong" data-success="right">Prix</label>
+              <label for="prix" data-error="wrong" data-success="right">Prix (champs non obligatoire)</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s9">
               <input id="typeactivite" name="typeactivite" type="text" class="validate">
               <label for="typeactivite" data-error="wrong" data-success="right">Type</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s9">
+              <input id="categorie" name="categorie" type="text" class="validate">
+              <label for="categorie" data-error="wrong" data-success="right">Categorie d'âge des adhérents (champs non obligatoire)</label>
             </div>
           </div>
           <div class="row">

@@ -2,8 +2,12 @@
 	require ("controller/Controller_Test_Connexion.php");
 	onlineOnly();
 
+	require_once ('/model/Utilisateur.php');
 	require_once ('/model/Activite.php');
-	$information = Activite::Get_Activite_Type(2);
+
 	$cookieId = $_COOKIE['codeconnexion'];
+	$information = Activite::Get_Activite_Type(2);
+	$categorie = Utilisateur::Get_User_Categorie($cookieId);
+
 	require "view/type_activite.php";
 ?>

@@ -6,17 +6,18 @@
 	$description = htmlspecialchars($_POST['description']);
 	$prix = htmlspecialchars($_POST['prix']);
 	$type = htmlspecialchars($_POST['typeactivite']);
+	$categorie = htmlspecialchars($_POST['categorie']);
 
 	
 
-	if (empty($nom) || empty($dateAct) || empty($prix) || empty($description) || empty($type)) {
+	if (empty($nom) || empty($dateAct) || empty($description) || empty($type)) {
 		$messageErreur = "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
 		
 		header("Location: ../Erreur.php?erreur=".$messageErreur);
 	}
 	else
 	{
-		Activite::Add_Activite($nom,$dateAct,$description,$prix,$type);
+		Activite::Add_Activite($nom,$dateAct,$description,$prix,$type,$categorie);
 	}
-	//header("Location: ../Accueil.php");
+	header("Location: ../Activite.php");
 ?>

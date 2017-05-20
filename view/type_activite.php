@@ -27,6 +27,7 @@
   <?php require ("view/entete.php");
   require_once ('/model/Inscrire.php');
   require_once ('/model/Encadrer.php');
+  require_once ('/model/Utilisateur.php');
   ?>
 
   <div class="container"> 
@@ -37,52 +38,80 @@
               <th>Date</th>
               <th>Description</th>
               <th>Prix</th>
+              <?php if(isAdmin()){
+                echo "<th>Responsable</th>";
+              }
+              ?>
           </tr>
         </thead>
 
         <tbody>
           <?php 
             while($ligne=$information->fetch()){
-              echo "<tr>";
-                echo "<td> $ligne[nom_activite]</td>";
-                echo "<td> $ligne[date_activite]</td>";
-                echo "<td> $ligne[description]</td>";
-                echo "<td> $ligne[prix]</td>";
-               
-                if (isAdmin()){
-                  echo "<td> <a href='Modification_Activite.php?id_activite=$ligne[id_activite]'>";
-                  echo "Modifier";
-                  echo "</a></td>";
+                if(isAdmin() or isAnimateur()){
+                  $responsable = Utilisateur::Get_Responsable_Activite($ligne['id_activite']);
+                  echo "<tr>";
+                        echo "<td> $ligne[nom_activite]</td>";
+                        echo "<td> $ligne[date_activite]</td>";
+                        echo "<td> $ligne[description]</td>";
+                        echo "<td> $ligne[prix]</td>";
+                
+                        if (isAdmin()){
+                              if ($responsable['id_activite'] == $ligne['id_activite']){
+                                echo "<td> $responsable[nom]</td>";
+                              }
+                              else{
+                                echo "<td></td>";
+                              }
+                              echo "<td> <a href='Modification_Activite.php?id_activite=$ligne[id_activite]'>";
+                              echo "Modifier";
+                              echo "</a></td>";
+                              echo "<td> <a href='Suppression_Activite.php?id_activite=$ligne[id_activite]'>";
+                              echo "Supprimer";
+                              echo "</a></td>";
+                        }
+
+                        else{
+                            if (empty(Encadrer::Check_Encadrement($cookieId,$ligne['id_activite']))){
+                                  echo "<td> <a href='Encadrement_Activite.php?id_activite=$ligne[id_activite]'>";
+                                  echo "Encadrer";
+                                  echo "</a></td>";
+                            }
+                            else{
+                                  echo "<td> <a href='Non_Encadrement_Activite.php?id_activite=$ligne[id_activite]'>";
+                                  echo "Ne plus encadrer";
+                                  echo "</a></td>";
+                            }
+                        }
+                      echo "</tr>";
+
                 }
 
-                elseif(isAnimateur()){
-                  if (empty(Encadrer::Check_Encadrement($cookieId,$ligne['id_activite']))){
-                    echo "<td> <a href='Encadrement_Activite.php?id_activite=$ligne[id_activite]'>";
-                    echo "Encadrer";
-                    echo "</a></td>";
-                  }
-                  else{
-                    echo "<td> <a href='Non_Encadrement_Activite.php?id_activite=$ligne[id_activite]'>";
-                    echo "Ne plus encadrer";
-                    echo "</a></td>";
-                  }
-                }
+
 
                 else{
-                  if (empty(Inscrire::Check_Inscription($cookieId,$ligne['id_activite']))){
-                    echo "<td> <a href='Inscription_Activite.php?id_activite=$ligne[id_activite]'>";
-                    echo "S'inscrire";
-                    echo "</a></td>";
-                  }
-                  else{
-                    echo "<td> <a href='Desinscription_Activite.php?id_activite=$ligne[id_activite]'>";
-                    echo "Désinscription";
-                    echo "</a></td>";
-                  }
-                }
-                echo "</tr>";
-              }
-              ?>
+                 if($categorie == $ligne['id_categorie'] or empty($ligne['id_categorie'])){
+                        echo "<tr>";
+                        echo "<td> $ligne[nom_activite]</td>";
+                        echo "<td> $ligne[date_activite]</td>";
+                        echo "<td> $ligne[description]</td>";
+                        echo "<td> $ligne[prix]</td>";
+
+                            if (empty(Inscrire::Check_Inscription($cookieId,$ligne['id_activite']))){
+                                  echo "<td> <a href='Inscription_Activite.php?id_activite=$ligne[id_activite]'>";
+                                  echo "S'inscrire";
+                                  echo "</a></td>";
+                            }
+                            else{
+                                  echo "<td> <a href='Desinscription_Activite.php?id_activite=$ligne[id_activite]'>";
+                                  echo "Désinscription";
+                                  echo "</a></td>";
+                            }
+                      }
+                      echo "</tr>";
+                }                       
+          }
+        ?>
         </tbody>
       </table>
   </div>

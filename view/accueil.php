@@ -46,6 +46,9 @@
                         echo "<td> <a href='Modification_Message.php?id_message=$ligne[id_message]'>";
                         echo "Modifier";
                         echo "</a></td>";
+                        echo "<td> <a href='Suppression_Message.php?id_message=$ligne[id_message]'>";
+                        echo "Supprimer";
+                        echo "</a></td>";
                       }
                     }
                     ?>
