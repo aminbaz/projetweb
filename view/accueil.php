@@ -25,6 +25,34 @@
  
   <body> 
   <?php require ("view/entete.php");?>
+  <?php require_once ("controller/Controller_Test_Connexion.php");?>
+
+    <?php if(isConnected()){?>
+      <div class="container"> 
+          <table class="bordered highlight centered ">
+              <thead>
+                <tr>
+                    <th>Message</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <?php 
+                  while($ligne=$information->fetch()){
+                    echo "<tr>";
+                      echo "<td> $ligne[lib_message]</td>";
+                      echo "<td> $ligne[texte_message]</td>";
+                      if (isAdmin()){
+                        echo "<td> <a href='Modification_Message.php?id_message=$ligne[id_message]'>";
+                        echo "Modifier";
+                        echo "</a></td>";
+                      }
+                    }
+                    ?>
+              </tbody>
+            </table>
+        </div>
+        <?php } ?>
 
 
       <!--Import jQuery before materialize.js-->

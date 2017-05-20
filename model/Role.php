@@ -2,9 +2,6 @@
 class Role
 {
 	public static function Get_Role($roleId)
-	//Role_Id => [Role_Title]
-	//données : $roleId int correspondant à l'id du rôle
-	//résultat : string correspondant à l'intitulé du rôle ayant l'id $roleId
 	{
 		require_once('Pdo.php');
 		$bd=connexion();

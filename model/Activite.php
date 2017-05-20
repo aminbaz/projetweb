@@ -58,6 +58,23 @@ class Activite
 					$req->bindParam(':codetype',$codetype);
 
 					$req->execute();
-				}			
+				}	
+
+
+	public static function Update_Activite($id,$nom,$date,$description,$prix)
+				{
+					require_once('Pdo.php');
+					$bd=connexion();
+
+					$req = $bd->prepare('UPDATE activite set nom_activite=:nom, description=:description, prix=:prix, date_activite=:dateAct where id_activite=:id');
+					$req->bindParam(':id',$id);
+					$req->bindParam(':nom',$nom);
+					$req->bindParam(':dateAct',$date);
+					$req->bindParam(':description',$description);
+					$req->bindParam(':prix',$prix);
+					
+
+					$req->execute();
+				}		
 }
 ?>

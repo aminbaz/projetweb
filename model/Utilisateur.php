@@ -129,7 +129,7 @@
 				require_once('Pdo.php');
 				$bd=connexion();
 
-				$req = $bd->prepare('UPDATE Utilisateur set nom=:name, prenom=:firstname, sexe=:gender, date_naiss=:datenaiss where id_utilisateur=:id');
+				$req = $bd->prepare('UPDATE utilisateur set nom=:name, prenom=:firstname, sexe=:gender, date_naiss=:datenaiss where id_utilisateur=:id');
 				$req->bindParam(':id',$id);
 				$req->bindParam(':name',$name);
 				$req->bindParam(':firstname',$firstName);

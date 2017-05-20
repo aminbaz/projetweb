@@ -63,4 +63,25 @@ function isAdmin()
 		return false;
 	}
 }
+
+function isAnimateur()
+{
+	if(isConnected())
+	{
+		$userId = $_COOKIE["codeconnexion"];
+		$roleId = Utilisateur::Get_User_Role($userId);
+		if($roleId != 2)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+	else
+	{
+		return false;
+	}
+}
 ?>

@@ -1,7 +1,11 @@
 <?php
-//require_once ("model/User.php");
+require_once ("model/Utilisateur.php");
+require_once ("model/Message.php");
+//require_once ("controller/Controller_Test_Utilisateur.php");
 
-//require_once ("controller/Controller_Test_User.php");
+//onlineonly();
+
+$information = Message::Get_Message();
 
 require "view/accueil.php";
 

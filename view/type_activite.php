@@ -24,8 +24,11 @@
   </head> 
  
   <body> 
-  <?php require ("view/entete.php");?>
-   <?require ("controller/Controller_Test_Connexion.php");?>
+  <?php require ("view/entete.php");
+  require_once ('/model/Inscrire.php');
+  require_once ('/model/Encadrer.php');
+  ?>
+
   <div class="container"> 
     <table class="bordered highlight centered ">
         <thead>
@@ -34,7 +37,6 @@
               <th>Date</th>
               <th>Description</th>
               <th>Prix</th>
-              <th><?php if (isAdmin()){echo "Modifier";}else{ echo "S'inscrire";}?></th>
           </tr>
         </thead>
 
@@ -46,12 +48,41 @@
                 echo "<td> $ligne[date_activite]</td>";
                 echo "<td> $ligne[description]</td>";
                 echo "<td> $ligne[prix]</td>";
-                echo "<td> <a href='Inscription_Activite.php?id_activite=$ligne[id_activite]'>";
-                if (isAdmin()){echo "Modifier";}else{ echo "S'inscrire";}
-                echo "</a></td>";
-             echo "</tr>";
-            }
-          ?>
+               
+                if (isAdmin()){
+                  echo "<td> <a href='Modification_Activite.php?id_activite=$ligne[id_activite]'>";
+                  echo "Modifier";
+                  echo "</a></td>";
+                }
+
+                elseif(isAnimateur()){
+                  if (empty(Encadrer::Check_Encadrement($cookieId,$ligne['id_activite']))){
+                    echo "<td> <a href='Encadrement_Activite.php?id_activite=$ligne[id_activite]'>";
+                    echo "Encadrer";
+                    echo "</a></td>";
+                  }
+                  else{
+                    echo "<td> <a href='Non_Encadrement_Activite.php?id_activite=$ligne[id_activite]'>";
+                    echo "Ne plus encadrer";
+                    echo "</a></td>";
+                  }
+                }
+
+                else{
+                  if (empty(Inscrire::Check_Inscription($cookieId,$ligne['id_activite']))){
+                    echo "<td> <a href='Inscription_Activite.php?id_activite=$ligne[id_activite]'>";
+                    echo "S'inscrire";
+                    echo "</a></td>";
+                  }
+                  else{
+                    echo "<td> <a href='Desinscription_Activite.php?id_activite=$ligne[id_activite]'>";
+                    echo "Désinscription";
+                    echo "</a></td>";
+                  }
+                }
+                echo "</tr>";
+              }
+              ?>
         </tbody>
       </table>
   </div>

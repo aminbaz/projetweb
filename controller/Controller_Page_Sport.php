@@ -3,7 +3,10 @@
 	onlineOnly();
 
 	require_once ('/model/Activite.php');
-	$information = Activite::Get_Activite_Type(1);
+	
+
 	$cookieId = $_COOKIE['codeconnexion'];
+	$information = Activite::Get_Activite_Type(1);
+	
 	require "view/type_activite.php";
 ?>

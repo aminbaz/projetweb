@@ -1,8 +1,8 @@
 <?php
-class Inscrire
+class Encadrer
 {
 	
-	public static function Add_Inscription($idUser,$idActivite)
+	public static function Add_Encadrement($idUser,$idActivite)
 				//User_Gender x User_Name x User_First_Name x User_Password x User_Mail =>
 				//données : $gender string correspondant au sexe de l'utilisateur à ajouter, $name string correspondant au nom de l'utilisateur, $firstName string correspondant au prénom de l'utilisateur, $password string correspondant au mot de passe de l'utilisateur, $mail string correspondant au mail de l'utilisateur
 				//résultat : modifie la base de données en ajoutant une entité à la classe "User" en fonction des données entrées
@@ -10,14 +10,14 @@ class Inscrire
 					require_once('Pdo.php');
 					$bd=connexion();
 					
-					$req = $bd->prepare('INSERT INTO inscrire(id_utilisateur, id_activite) VALUES (:idUser, :idActivite)');
+					$req = $bd->prepare('INSERT INTO encadrer(id_utilisateur, id_activite) VALUES (:idUser, :idActivite)');
 					$req->bindParam(':idUser',$idUser);
 					$req->bindParam(':idActivite',$idActivite);
 
 					$req->execute();
 				}
 
-	public static function Delete_Inscription($idUser,$idActivite)
+	public static function Delete_Encadrement($idUser,$idActivite)
 				//User_Gender x User_Name x User_First_Name x User_Password x User_Mail =>
 				//données : $gender string correspondant au sexe de l'utilisateur à ajouter, $name string correspondant au nom de l'utilisateur, $firstName string correspondant au prénom de l'utilisateur, $password string correspondant au mot de passe de l'utilisateur, $mail string correspondant au mail de l'utilisateur
 				//résultat : modifie la base de données en ajoutant une entité à la classe "User" en fonction des données entrées
@@ -25,7 +25,7 @@ class Inscrire
 					require_once('Pdo.php');
 					$bd=connexion();
 					
-					$req = $bd->prepare('DELETE FROM inscrire WHERE id_utilisateur=:idUser and id_activite=:idActivite');
+					$req = $bd->prepare('DELETE FROM encadrer WHERE id_utilisateur=:idUser and id_activite=:idActivite');
 
 					$req->bindParam(':idUser',$idUser);
 					$req->bindParam(':idActivite',$idActivite);
@@ -34,12 +34,12 @@ class Inscrire
 				}
 
 
-	public static function Check_Inscription($idUser,$idActivite)
+	public static function Check_Encadrement($idUser,$idActivite)
 				{
 					require_once('Pdo.php');
 					$bd=connexion();
 
-					$req = $bd->prepare('SELECT * FROM inscrire WHERE id_utilisateur=:idUser and id_activite=:idActivite');
+					$req = $bd->prepare('SELECT * FROM encadrer WHERE id_utilisateur=:idUser and id_activite=:idActivite');
 					
 					$req->bindParam(':idUser',$idUser);
 					$req->bindParam(':idActivite',$idActivite);
