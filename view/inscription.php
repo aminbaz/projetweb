@@ -1,31 +1,13 @@
 <!doctype html> 
 <html lang="fr"> 
-  <head> 
-    <title>Inscription centre</title> 
-    <meta name="Content-Type" content="UTF-8"> 
-    <meta name="Content-Language" content="fr"> 
-    <meta name="Description" content="Gestion d'un centre social "> 
-    <meta name="Keywords" content="centre social"> 
-    <meta name="Subject" content="Gestion centre social "> 
-    <meta name="Author" content="Amin BAZAZ"> 
-      <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"> 
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
-      <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-
-  
-          
-  </head> 
+  <?php require ("view/header.php");?>
  
   <body> 
   <?php require ("view/entete.php");?>
        <div class="container"> 
-      <h5 class="center-align">Inscription</h5> 
-      <div class="row z-depth-4 blue-grey lighten-5"> 
+      <div class="row z-depth-4 grey lighten-5"> 
         <form class="col s12" method="post" action="controller/Controller_Inscription.php"> 
+        <h5 class="center-align">Inscription</h5> 
           <div class="row"> 
             <div class="input-field col s9"> 
               <input id="nom" name="nom" type="text" class="validate"> 
@@ -70,19 +52,12 @@
           </div> 
           <div class="row"> 
             <div class="input-field col s9"> 
-              <button class="btn waves-effect waves-light" id="submit" value="valider">Valider</button> 
+              <button class="btn waves-effect waves-light grey" id="submit" value="valider">Valider</button> 
             </div> 
           </div> 
         </form> 
       </div> 
     </div> 
-  <script>$(document).ready(function() {
-    Materialize.updateTextFields();
-  });
-  </script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+  <?php require ("view/importscript.php");?>
   </body> 
 </html>
