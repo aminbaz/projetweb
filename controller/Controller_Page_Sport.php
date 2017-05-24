@@ -3,16 +3,11 @@
 	//onlineOnly();
 
 	
-	//$cookieId = $_COOKIE['codeconnexion'];
-	
-
-	//require_once ('/model/Utilisateur.php');
+	$cookieId = $_COOKIE['codeconnexion'];
 	
 	
 	require_once("model/Activite.php");
 	$information = Get_Activite_Type(1);
 	
 	require_once ("view/type_activite.php");
-	require_once("model/Activite.php");
-	$information = Get_Activite_Type(1);
 ?>
