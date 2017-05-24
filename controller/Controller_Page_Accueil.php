@@ -5,7 +5,7 @@
 
 //onlineonly();
 
-require_once ("model/Message.php");
+require("model/Message.php");
 
 $information = Message::Get_Message();
 
