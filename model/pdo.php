@@ -8,7 +8,7 @@ function connexion()
 
 	try
 	{
-		$pdo = new PDO("pgsql:host="$host";dbname="$dbname,$dbuser,$dbpass);
+		$pdo = new PDO("pgsql:host=$host;dbname=$dbname",$dbuser,$dbpass);
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	}
 	catch (PDOException $e)
