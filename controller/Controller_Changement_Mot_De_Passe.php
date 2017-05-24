@@ -8,13 +8,13 @@
 	
 
 	if ( empty($password) || empty($password_check) ) {
-		echo "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
+		echo "<h3>Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! </h3>";
 	}
 	elseif ($password != $password_check) {
-		echo 'Les mots de passe saisis ne sont pas identiques ! ';
+		echo '<h3>Les mots de passe saisis ne sont pas identiques ! </h3>';
 	}
 	elseif (strlen($password)<6) {
-		echo 'Votre mot de passe doit faire plus de 6 caractères';
+		echo '<h3>Votre mot de passe doit faire plus de 6 caractères </h3>';
 	}
 	else
 	{

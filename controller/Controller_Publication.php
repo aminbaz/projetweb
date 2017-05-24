@@ -7,7 +7,7 @@
 	$id = $_COOKIE['codeconnexion'];
 
 	if (empty($titre) || empty($texte)) {
-		echo "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
+		echo "<h3> Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! </h3>";
 	}
 	else
 	{

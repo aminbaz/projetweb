@@ -18,10 +18,10 @@ else
 }
 
 if (empty($role) || empty($mail)) {
-	echo "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
+	echo "<h3> Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! </h3>";
 }
 elseif (!(filter_var($mail, FILTER_VALIDATE_EMAIL))) {
-	echo "Votre email n'est pas valide  ! ";
+	echo "<h3> Votre email n'est pas valide  ! </h3>";
 }
 else
 {

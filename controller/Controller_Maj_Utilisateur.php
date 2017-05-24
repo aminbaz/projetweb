@@ -11,7 +11,7 @@ require_once ("../model/Utilisateur.php");
 
 
 	if (empty($nom) || empty($prenom) || empty($sexe) || empty($datenaiss) ) {
-		echo "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
+		echo "<h3> Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! </h3>";
 	}
 	else
 	{

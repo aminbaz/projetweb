@@ -13,19 +13,19 @@
 	$mailverif=Check_Mail($mail);
 
 	if (empty($nom) || empty($prenom) || empty($sexe) || empty($datenaiss) || empty($password) || empty($password_check) || empty($mail) ) {
-		echo "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
+		echo "<h3>Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! </h3>";
 	}
 	elseif (strlen($password)<6) {
-		echo "Votre mot de passe doit faire plus de 6 caractères";
+		echo "<h3>Votre mot de passe doit faire plus de 6 caractères </h3>";
 	}
 	elseif ($password != $password_check) {
-		echo 'Les mots de passe saisies ne sont pas identiques ! ';
+		echo '<h3>Les mots de passe saisies ne sont pas identiques ! </h3>';
 	}
 	elseif (!(filter_var($mail, FILTER_VALIDATE_EMAIL))) {
-		echo "Votre mail n'est pas valide  ! ";
+		echo "<h3>Votre mail n'est pas valide  ! </h3>";
 	}
 	elseif (!(empty($mailverif['Utilisateur_Id']))) {
-		echo "Ce mail est déjà associé à un compte !";
+		echo "<h3>Ce mail est déjà associé à un compte ! </h3>";
 	}
 	else
 	{

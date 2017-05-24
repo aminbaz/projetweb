@@ -9,7 +9,7 @@ require_once ("../model/Message.php");
 
 
 	if (empty($titre) || empty($dateMes) || empty($texte)) {
-		echo "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
+		echo "<h3> Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! </h3>";
 	}
 	else
 	{

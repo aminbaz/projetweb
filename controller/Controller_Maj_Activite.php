@@ -10,7 +10,7 @@ require_once ("../model/Activite.php");
 
 
 	if (empty($nom) || empty($dateAct) || empty($description) || empty($prix) ) {
-		echo "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
+		echo "<h3> Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! </h3>";
 	}
 	else
 	{
