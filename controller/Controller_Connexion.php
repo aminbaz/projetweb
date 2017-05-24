@@ -1,5 +1,5 @@
 <?php
-require_once ("model/Utilisateur.php");
+require_once ("../model/Utilisateur.php");
 
 $mdp = htmlspecialchars($_POST["password"]);
 $mail = htmlspecialchars($_POST["email"]);
