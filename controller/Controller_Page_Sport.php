@@ -1,6 +1,6 @@
 <?php
-	require ("controller/Controller_Test_Connexion.php");
-	onlineOnly();
+	//require ("controller/Controller_Test_Connexion.php");
+	//onlineOnly();
 
 	require_once ('/model/Activite.php');
 	require_once ('/model/Utilisateur.php');
