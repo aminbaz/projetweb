@@ -1,7 +1,7 @@
 <?php
-	/*require_once ('../model/Utilisateur.php');
+	require_once ('../model/Utilisateur.php');
 
-	$nom = htmlspecialchars($_POST['nom']);
+	/*$nom = htmlspecialchars($_POST['nom']);
 	$prenom = htmlspecialchars($_POST['prenom']);
 	$sexe = htmlspecialchars($_POST['sexe']);
 	$datenaiss = htmlspecialchars($_POST['dateNaiss']);
