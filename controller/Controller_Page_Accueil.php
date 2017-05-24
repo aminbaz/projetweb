@@ -1,6 +1,6 @@
 <?php
 
-require_once ("model/Message.php");
+require("model/Message.php");
 
 $information = Get_Message();
 
