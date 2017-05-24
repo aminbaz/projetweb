@@ -12,5 +12,5 @@
 	
 
 	
-	require "view/type_activite.php";
+	require_once "view/type_activite.php";
 ?>
