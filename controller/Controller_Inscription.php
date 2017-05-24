@@ -10,7 +10,7 @@
 	$password_check = htmlspecialchars($_POST['password_check']);
 	
 
-	/*$mailverif=Check_Mail($mail);*/
+	$mailverif=Check_Mail($mail);
 
 	if (empty($nom) || empty($prenom) || empty($sexe) || empty($datenaiss) || empty($password) || empty($password_check) || empty($mail) ) {
 		$messageErreur = "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
