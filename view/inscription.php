@@ -22,8 +22,13 @@
           </div> 
           <div class="row"> 
             <div class="input-field col s9"> 
-              <input id="sexe" name="sexe" type="text" class="validate"> 
               <label for="sexe" data-error="wrong" data-success="right">Sexe</label> 
+              <p>
+                <input name="sexe" type="radio" id="sexe" />
+                <label for="sexe">homme</label>
+                <input name="sexe" type="radio" id="sexe" />
+                <label for="sexe">femme</label>
+              </p>
             </div> 
           </div> 
           <div class="row"> 
