@@ -1,3 +1,3 @@
 <?php 
-header("Accueil.php");
+	require("Accueil.php");
 ?>
