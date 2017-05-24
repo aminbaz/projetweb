@@ -47,12 +47,26 @@
               <label for="prix" data-error="wrong" data-success="right">Prix (champs non obligatoire)</label>
             </div>
           </div>
+
+
+
           <div class="row">
             <div class="input-field col s9">
-              <input id="typeactivite" name="typeactivite" type="text" class="validate">
+
               <label for="typeactivite" data-error="wrong" data-success="right">Type</label>
+               <select>
+                  <option value="" disabled="disabled" selected="selected">Type d'activité</option>
+                  <option value="sport">Sport</option>
+                  <option value="culturel">Culturel</option>
+                  <option value="scolaire">Scolaire</option>
+                  <option value="voyage">Voyage</option>
+                  <option value="jeu">Jeu</option>
+               </select>
+
+              
             </div>
           </div>
+
           <div class="row">
             <div class="input-field col s9">
               <input id="categorie" name="categorie" type="text" class="validate">
