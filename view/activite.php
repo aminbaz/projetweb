@@ -48,19 +48,17 @@
             </div>
           </div>
 
-
-          <div class="input-field col s12">
-            <select name="gender" id="gender">
-              <option value="" disabled selected>Entrer votre sexe</option>
-              <option value="Homme">Homme</option>
-              <option value="Femme">Femme</option>
-            </select>
-            <label for="gender">Sexe</label>
-          </div>    
-
           <div class="row">
             <div class="input-field col s9">
               <input id="typeactivite" name="typeactivite" type="text" class="validate">
+              <p>
+      <input name="group1" type="radio" id="test1" />
+      <label for="test1">Red</label>
+    </p>
+    <p>
+      <input name="group1" type="radio" id="test2" />
+      <label for="test2">Yellow</label>
+    </p>
               <label for="typeactivite" data-error="wrong" data-success="right">Type</label>
             </div>
           </div>
