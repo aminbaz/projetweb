@@ -1,7 +1,23 @@
 <?php
 	function Get_Activite($idActivite){
-				require_once('Pdo.php');
-				$bd=connexion();
+				//require_once('Pdo.php');
+				//$bd=connexion();
+
+				$dbname = 'd5q4pq6s1eblro';
+				$host = 'ec2-54-247-166-129.eu-west-1.compute.amazonaws.com';
+				$dbuser = 'bjeocquzxzeuqh';
+				$dbpass = '70e714e41ab10e7ad78a08d680301ffcc762857eace102ae3fcbcba1d150728d';
+
+				try
+				{
+					$bd = new PDO("pgsql:host=$host;dbname=$dbname",$dbuser,$dbpass);
+					$bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+				}
+				catch (PDOException $e)
+				{
+						echo $e->getMessage();
+						die('<br> Echec lors de la connexion à la BD');
+				}
 
 				$req = $bd->prepare("SELECT * FROM activite WHERE id_activite = :idActivite");
 				$req->bindParam(':idActivite',$idActivite);
@@ -13,8 +29,24 @@
 
 
 	function Get_Activite_Type($id_type){
-				require_once('Pdo.php');
-				$bd=connexion();
+				//require_once('Pdo.php');
+				//$bd=connexion();
+
+				$dbname = 'd5q4pq6s1eblro';
+				$host = 'ec2-54-247-166-129.eu-west-1.compute.amazonaws.com';
+				$dbuser = 'bjeocquzxzeuqh';
+				$dbpass = '70e714e41ab10e7ad78a08d680301ffcc762857eace102ae3fcbcba1d150728d';
+
+				try
+				{
+					$bd = new PDO("pgsql:host=$host;dbname=$dbname",$dbuser,$dbpass);
+					$bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+				}
+				catch (PDOException $e)
+				{
+						echo $e->getMessage();
+						die('<br> Echec lors de la connexion à la BD');
+				}
 
 				$req = $bd->prepare("SELECT * FROM activite WHERE id_type = :id_type");
 				$req->bindParam(':id_type',$id_type);
@@ -31,9 +63,24 @@
 				//données : $gender string correspondant au sexe de l'utilisateur à ajouter, $name string correspondant au nom de l'utilisateur, $firstName string correspondant au prénom de l'utilisateur, $password string correspondant au mot de passe de l'utilisateur, $mail string correspondant au mail de l'utilisateur
 				//résultat : modifie la base de données en ajoutant une entité à la classe "User" en fonction des données entrées
 				{
-					require_once('Pdo.php');
+					//require_once('Pdo.php');
+					//$bd=connexion();
 
-					$bd=connexion();
+					$dbname = 'd5q4pq6s1eblro';
+					$host = 'ec2-54-247-166-129.eu-west-1.compute.amazonaws.com';
+					$dbuser = 'bjeocquzxzeuqh';
+					$dbpass = '70e714e41ab10e7ad78a08d680301ffcc762857eace102ae3fcbcba1d150728d';
+
+					try
+					{
+						$bd = new PDO("pgsql:host=$host;dbname=$dbname",$dbuser,$dbpass);
+						$bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+					}
+					catch (PDOException $e)
+					{
+							echo $e->getMessage();
+							die('<br> Echec lors de la connexion à la BD');
+					}
  
 					if ($type == "sport") {
 						$codetype = 1;
@@ -89,8 +136,24 @@
 
 	function Update_Activite($id,$nom,$date,$description,$prix)
 				{
-					require_once('Pdo.php');
-					$bd=connexion();
+					//require_once('Pdo.php');
+					//$bd=connexion();
+
+					$dbname = 'd5q4pq6s1eblro';
+					$host = 'ec2-54-247-166-129.eu-west-1.compute.amazonaws.com';
+					$dbuser = 'bjeocquzxzeuqh';
+					$dbpass = '70e714e41ab10e7ad78a08d680301ffcc762857eace102ae3fcbcba1d150728d';
+
+					try
+					{
+						$bd = new PDO("pgsql:host=$host;dbname=$dbname",$dbuser,$dbpass);
+						$bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+					}
+					catch (PDOException $e)
+					{
+							echo $e->getMessage();
+							die('<br> Echec lors de la connexion à la BD');
+					}
 
 					$req = $bd->prepare('UPDATE activite set nom_activite=:nom, description=:description, prix=:prix, date_activite=:dateAct where id_activite=:id');
 					$req->bindParam(':id',$id);
@@ -108,8 +171,24 @@
 				//données : $gender string correspondant au sexe de l'utilisateur à ajouter, $name string correspondant au nom de l'utilisateur, $firstName string correspondant au prénom de l'utilisateur, $password string correspondant au mot de passe de l'utilisateur, $mail string correspondant au mail de l'utilisateur
 				//résultat : modifie la base de données en ajoutant une entité à la classe "User" en fonction des données entrées
 				{
-					require_once('Pdo.php');
-					$bd=connexion();
+					//require_once('Pdo.php');
+					//$bd=connexion();
+
+					$dbname = 'd5q4pq6s1eblro';
+					$host = 'ec2-54-247-166-129.eu-west-1.compute.amazonaws.com';
+					$dbuser = 'bjeocquzxzeuqh';
+					$dbpass = '70e714e41ab10e7ad78a08d680301ffcc762857eace102ae3fcbcba1d150728d';
+
+					try
+					{
+						$bd = new PDO("pgsql:host=$host;dbname=$dbname",$dbuser,$dbpass);
+						$bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+					}
+					catch (PDOException $e)
+					{
+							echo $e->getMessage();
+							die('<br> Echec lors de la connexion à la BD');
+					}
 					
 					$req = $bd->prepare('DELETE FROM activite WHERE id_activite=:id');
 
