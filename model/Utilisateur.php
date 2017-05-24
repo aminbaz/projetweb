@@ -99,7 +99,7 @@
 			//données : string correspondant au mail à vérifier
 			//résultat : renvoie un booleen pour savoir si le mail est déja utilisé
 			{
-				require_once('../model/Pdo.php');
+				require_once('model/Pdo.php');
 				$bd=connexion();
 
 				$req = $bd->prepare("SELECT * FROM utilisateur WHERE mail='".$mail."'");
