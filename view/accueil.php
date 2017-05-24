@@ -8,7 +8,7 @@
 
   ?>
 
-  <img class="responsive-img" src="image/background.jpg" alt="Photos d'hommes et de femmes" />
+  
     <?php if(isConnected()){
       require_once("model/Message.php");
       $information = Get_Message();
@@ -40,7 +40,13 @@
               </tbody>
             </table>
         </div>
-        <?php } ?>
+        <?php } 
+        else{
+          ?>
+          <img class="responsive-img" src="image/background.jpg" alt="Photos d'hommes et de femmes" />;
+        <?php } 
+          ?>
+        
 
 
      <?php require ("view/importscript.php");?>
