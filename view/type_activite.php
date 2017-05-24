@@ -4,10 +4,8 @@
  
   <body> 
   <?php require ("view/entete.php");
-  require_once ('/model/Inscrire.php');
-  require_once ('/model/Encadrer.php');
-  require_once ('/model/Utilisateur.php');
-  $categorie = Get_User_Categorie($cookieId);
+  require_once ('model/Inscrire.php');
+  require_once ('model/Encadrer.php');
   ?>
 
   <div class="container"> 
