@@ -7,6 +7,7 @@
   require_once ('/model/Inscrire.php');
   require_once ('/model/Encadrer.php');
   require_once ('/model/Utilisateur.php');
+  $categorie = Get_User_Categorie($cookieId);
   ?>
 
   <div class="container"> 
