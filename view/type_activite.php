@@ -68,7 +68,7 @@
 
 
                 else{
-                 if($categorie == $ligne['id_categorie'] or empty($ligne['id_categorie'])){
+                 if($categorie == $ligne['id_categorie'] or $ligne['id_categorie'] == 5){
                         echo "<tr>";
                         echo "<td> $ligne[nom_activite]</td>";
                         echo "<td> $ligne[date_activite]</td>";

@@ -1,6 +1,6 @@
 <?php
 	require ("Controller_Test_Connexion.php");
-	require_once ('../model/Utilisateur.php');
+	require_once ('model/Utilisateur.php');
 	$id = $_COOKIE['codeconnexion'];
 
 	if (isAnimateur()){
