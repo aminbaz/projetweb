@@ -2,10 +2,6 @@
 require_once ("model/Utilisateur.php");
 
 
-
-
-require_once ("/controller/Controller_Test_Connexion.php");
-
 require_once ("model/Message.php");
 
 $information = Get_Message();
