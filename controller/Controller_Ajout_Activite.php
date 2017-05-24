@@ -11,7 +11,7 @@
 	
 
 	if (empty($nom) || empty($dateAct) || empty($description) || empty($type)) {
-		echo "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
+		echo "<h1>Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! </h1";
 	}
 	else
 	{
