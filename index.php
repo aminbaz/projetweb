@@ -1,5 +1,4 @@
 <?php 
-	//require("Accueil.php");
+	require_once("Accueil.php");
 	
 ?>
-<h1>sdfdsf</h1>
