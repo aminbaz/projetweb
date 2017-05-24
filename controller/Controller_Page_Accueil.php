@@ -5,7 +5,7 @@
 
 //onlineonly();
 
-include("model/Message.php");
+include_once("model/Message.php");
 
 $information = Message::Get_Message();
 
