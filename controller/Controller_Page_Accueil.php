@@ -9,9 +9,9 @@
 
 require_once "view/accueil.php";
 
-//require_once ("controller/Controller_Test_Utilisateur.php");
+require_once ("controller/Controller_Test_Utilisateur.php");
 
-//onlineonly();
+onlineonly();
 
 require_once ("model/Message.php");
 
