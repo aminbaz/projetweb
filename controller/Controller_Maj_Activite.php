@@ -1,6 +1,6 @@
 <?php
 
-require_once ("../model/Activite.php");
+require_once ("model/Activite.php");
 
 	$nom = htmlspecialchars($_POST['nom']);
 	$dateAct = htmlspecialchars($_POST['dateAct']);
