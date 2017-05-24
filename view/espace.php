@@ -4,8 +4,6 @@
  
   <body> 
   <?php require ("view/entete.php");?>
-  <?require ("controller/Controller_Test_Connexion.php");?>
-<?php if (isAdmin()){?>
 	 <div class="container">
       <div class="row z-depth-4 grey lighten-5">
         <form class="col s12" method="post" action="controller/Controller_Role.php">  
@@ -75,7 +73,6 @@
       </div>
     </div>
 
-<?php ;}?>
 <?php require ("view/importscript.php");?>
   </body>
 </html>
