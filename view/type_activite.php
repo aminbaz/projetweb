@@ -28,7 +28,7 @@
           <?php 
             while($ligne=$information->fetch()){
                 if(isAdmin() or isAnimateur()){
-                  $responsable = Utilisateur::Get_Responsable_Activite($ligne['id_activite']);
+                  $responsable = Get_Responsable_Activite($ligne['id_activite']);
                   echo "<tr>";
                         echo "<td> $ligne[nom_activite]</td>";
                         echo "<td> $ligne[date_activite]</td>";
@@ -51,7 +51,7 @@
                         }
 
                         else{
-                            if (empty(Encadrer::Check_Encadrement($cookieId,$ligne['id_activite']))){
+                            if (empty(Check_Encadrement($cookieId,$ligne['id_activite']))){
                                   echo "<td> <a href='Encadrement_Activite.php?id_activite=$ligne[id_activite]'>";
                                   echo "Encadrer";
                                   echo "</a></td>";
@@ -76,7 +76,7 @@
                         echo "<td> $ligne[description]</td>";
                         echo "<td> $ligne[prix]</td>";
 
-                            if (empty(Inscrire::Check_Inscription($cookieId,$ligne['id_activite']))){
+                            if (empty(Check_Inscription($cookieId,$ligne['id_activite']))){
                                   echo "<td> <a href='Inscription_Activite.php?id_activite=$ligne[id_activite]'>";
                                   echo "S'inscrire";
                                   echo "</a></td>";

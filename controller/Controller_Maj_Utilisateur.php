@@ -17,7 +17,7 @@ require_once ("../model/Utilisateur.php");
 	}
 	else
 	{
-		Utilisateur::Update_User($cookieId,$nom,$prenom,$sexe,$datenaiss);
+		Update_User($cookieId,$nom,$prenom,$sexe,$datenaiss);
 		header("location: ../Profil.php");
 	}
 

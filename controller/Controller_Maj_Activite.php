@@ -16,7 +16,7 @@ require_once ("../model/Activite.php");
 	}
 	else
 	{
-		Activite::Update_Activite($idActivite,$nom,$dateAct,$description,$prix);
+		Update_Activite($idActivite,$nom,$dateAct,$description,$prix);
 		header("location: ../Activite.php");
 	}
 

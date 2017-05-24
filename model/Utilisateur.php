@@ -1,7 +1,6 @@
 <?php
-	class Utilisateur
-		{
-			public static function Get_User($userId){
+
+			function Get_User($userId){
 				require_once('Pdo.php');
 				$bd=connexion();
 
@@ -14,7 +13,7 @@
 				return $data; //Verifier si null
 			}
 
-			public static function Check_Password($userPassword,$userMail)
+			function Check_Password($userPassword,$userMail)
 			//User_Password x User_Mail => bool
 			//données : $userPassword string correspondant au mot de passe utilisateur, $userMail string correspondant au mail de l'utilisateur
 			//résultat : bool vérifiant si le mot de passe entré correspond bien au mail de l'utilisateur
@@ -32,7 +31,7 @@
 		
 			}
 
-			public static function Get_User_Id($userMail)
+			function Get_User_Id($userMail)
 			//User_Cookie_Code => User_Id
 			//données : $userCookieCode string correspondant à un code cookie
 			//résultat : vérifie si un code cookie existe dans la base de données, et le cas échéant renvoie un int correspondant à l'id de l'utilisateur auquel appartient le code cookie
@@ -49,7 +48,7 @@
 				return $data["id_utilisateur"]; //Verifier si null
 			}
 
-			public static function Check_Mail($mail)
+			function Check_Mail($mail)
 			//User_Mail => [User]
 			//données : string correspondant au mail à vérifier
 			//résultat : renvoie un booleen pour savoir si le mail est déja utilisé
@@ -65,7 +64,7 @@
 				return ($data);
 			}
 
-			public static function Add_Utilisateur($nom,$prenom,$sexe,$datenaiss,$mail,$mdp)
+			function Add_Utilisateur($nom,$prenom,$sexe,$datenaiss,$mail,$mdp)
 			//User_Gender x User_Name x User_First_Name x User_Password x User_Mail =>
 			//données : $gender string correspondant au sexe de l'utilisateur à ajouter, $name string correspondant au nom de l'utilisateur, $firstName string correspondant au prénom de l'utilisateur, $password string correspondant au mot de passe de l'utilisateur, $mail string correspondant au mail de l'utilisateur
 			//résultat : modifie la base de données en ajoutant une entité à la classe "User" en fonction des données entrées
@@ -97,7 +96,7 @@
 				$req->execute();
 			}
 
-			public static function Set_User_Role($userId,$roleId)
+			function Set_User_Role($userId,$roleId)
 			{
 				require_once('Pdo.php');
 				$bd=connexion();
@@ -109,7 +108,7 @@
 				$req->execute();
 			}
 
-			public static function Get_User_Role($userId)
+			function Get_User_Role($userId)
 			//User_Id => Role_Id
 			//données : $userId int correspondant à l'identifiant de l'utilisateur
 			//résultat : int correspondant à l'id du rôle de l'utilisateur
@@ -125,7 +124,7 @@
 				return $data["id_role"];
 			}
 
-			public static function Get_User_Categorie($userId)
+			function Get_User_Categorie($userId)
 			//User_Id => Role_Id
 			//données : $userId int correspondant à l'identifiant de l'utilisateur
 			//résultat : int correspondant à l'id du rôle de l'utilisateur
@@ -141,7 +140,7 @@
 				return $data["id_categorie"];
 			}
 
-			public static function Get_Activite_Adherent($userId)
+			function Get_Activite_Adherent($userId)
 			//User_Id => Role_Id
 			//données : $userId int correspondant à l'identifiant de l'utilisateur
 			//résultat : int correspondant à l'id du rôle de l'utilisateur
@@ -156,7 +155,7 @@
 				return $req;
 			}
 
-			public static function Get_Activite_Animateur($userId)
+			function Get_Activite_Animateur($userId)
 			//User_Id => Role_Id
 			//données : $userId int correspondant à l'identifiant de l'utilisateur
 			//résultat : int correspondant à l'id du rôle de l'utilisateur
@@ -172,7 +171,7 @@
 			}
 
 
-			public static function Get_Responsable_Activite($idActivite)
+			function Get_Responsable_Activite($idActivite)
 			//User_Id => Role_Id
 			//données : $userId int correspondant à l'identifiant de l'utilisateur
 			//résultat : int correspondant à l'id du rôle de l'utilisateur
@@ -190,7 +189,7 @@
 
 
 
-			public static function Update_User($id,$name,$firstName,$gender,$datenaiss){
+			function Update_User($id,$name,$firstName,$gender,$datenaiss){
 				require_once('Pdo.php');
 				$bd=connexion();
 
@@ -205,7 +204,7 @@
 				$req->execute();
 			}
 
-			public static function Update_Password($id,$mdp){
+			function Update_Password($id,$mdp){
 				require_once('Pdo.php');
 				$bd=connexion();
 
@@ -215,5 +214,4 @@
 
 				$req->execute();
 			}
-		}
 ?>

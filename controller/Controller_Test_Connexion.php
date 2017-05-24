@@ -8,7 +8,7 @@ require_once ("model/Role.php");
 		{
 			
 			$cookieperso = $_COOKIE["codeconnexion"];
-			$user = Utilisateur::Get_User($cookieperso);
+			$user = Get_User($cookieperso);
 			if (empty($user["id_utilisateur"])) 
 			{
 				return false;
@@ -48,7 +48,7 @@ function isAdmin()
 	if(isConnected())
 	{
 		$userId = $_COOKIE["codeconnexion"];
-		$roleId = Utilisateur::Get_User_Role($userId);
+		$roleId = Get_User_Role($userId);
 		if($roleId != 3)
 		{
 			return false;
@@ -69,7 +69,7 @@ function isAnimateur()
 	if(isConnected())
 	{
 		$userId = $_COOKIE["codeconnexion"];
-		$roleId = Utilisateur::Get_User_Role($userId);
+		$roleId = Get_User_Role($userId);
 		if($roleId != 2)
 		{
 			return false;

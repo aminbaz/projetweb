@@ -15,7 +15,7 @@ require_once ("../model/Message.php");
 	}
 	else
 	{
-		Message::Update_Message($idMessage,$titre,$texte,$dateMes);
+		Update_Message($idMessage,$titre,$texte,$dateMes);
 		header("location: ../Accueil.php");
 	}
 

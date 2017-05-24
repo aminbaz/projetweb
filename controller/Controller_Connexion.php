@@ -4,7 +4,7 @@ require_once ("../model/Utilisateur.php");
 $mdp = htmlspecialchars($_POST["password"]);
 $mail = htmlspecialchars($_POST["email"]);
 
-$cookiecode = Utilisateur::Get_User_Id($mail);
+$cookiecode = Get_User_Id($mail);
 
 if (empty($mdp) || empty($mail)) {
 	$messageErreur = "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
@@ -19,7 +19,7 @@ elseif (!(filter_var($mail, FILTER_VALIDATE_EMAIL))) {
 else
 {
 	$mdp = sha1(sha1(htmlspecialchars($mdp)));
-	if(Utilisateur::Check_Password($mdp,$mail))
+	if(Check_Password($mdp,$mail))
 	{
 
 		setcookie("codeconnexion", $cookiecode, time()+(3600), "/");

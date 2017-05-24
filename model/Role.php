@@ -1,7 +1,5 @@
 <?php
-class Role
-{
-	public static function Get_Role($roleId)
+	function Get_Role($roleId)
 	{
 		require_once('Pdo.php');
 		$bd=connexion();
@@ -14,5 +12,4 @@ class Role
 
 		return ($data['lib_role']);
 	}
-}
 ?>

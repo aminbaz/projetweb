@@ -13,7 +13,7 @@
 	}
 	else
 	{
-		Message::Add_Message($id,$titre,$texte,$date);
+		Add_Message($id,$titre,$texte,$date);
 	}
 	header("Location: Accueil.php");
 ?>

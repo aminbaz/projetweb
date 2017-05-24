@@ -5,8 +5,8 @@
 	require_once ('/model/Activite.php');
 
 	$cookieId = $_COOKIE['codeconnexion'];
-	$categorie = Utilisateur::Get_User_Categorie($cookieId);
-	$information = Activite::Get_Activite_Type(5);
+	$categorie = Get_User_Categorie($cookieId);
+	$information = Get_Activite_Type(5);
 	
 	require "view/type_activite.php";
 ?>

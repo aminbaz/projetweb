@@ -4,7 +4,7 @@ require_once ("../model/Utilisateur.php");
 $role = htmlspecialchars($_POST["role"]);
 $mail = htmlspecialchars($_POST["email"]);
 
-$id = Utilisateur::Get_User_Id($mail);
+$id = Get_User_Id($mail);
 
 if ($role == "administrateur") {
 	$numrole = 3;
@@ -29,7 +29,7 @@ elseif (!(filter_var($mail, FILTER_VALIDATE_EMAIL))) {
 }
 else
 {
-	Utilisateur::Set_User_Role($id,$numrole);
+	Set_User_Role($id,$numrole);
 	header("Location: ../Espace.php");
 
 }

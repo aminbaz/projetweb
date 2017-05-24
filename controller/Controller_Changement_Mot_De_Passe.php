@@ -32,7 +32,7 @@
 	else
 	{
 		$password = sha1(sha1($password));
-		Utilisateur::Update_Password($cookieId,$password);
+		Update_Password($cookieId,$password);
 		setcookie("codeconnexion","", time() , "/");
 		header("Location: ../Connexion.php");
 	}

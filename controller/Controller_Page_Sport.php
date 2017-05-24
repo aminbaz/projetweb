@@ -7,8 +7,8 @@
 	
 
 	$cookieId = $_COOKIE['codeconnexion'];
-	$information = Activite::Get_Activite_Type(1);
-	$categorie = Utilisateur::Get_User_Categorie($cookieId);
+	$information = Get_Activite_Type(1);
+	$categorie = Get_User_Categorie($cookieId);
 	
 
 	

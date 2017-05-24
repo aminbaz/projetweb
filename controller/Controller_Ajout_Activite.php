@@ -17,7 +17,7 @@
 	}
 	else
 	{
-		Activite::Add_Activite($nom,$dateAct,$description,$prix,$type,$categorie);
+		Add_Activite($nom,$dateAct,$description,$prix,$type,$categorie);
 	}
 	header("Location: ../Activite.php");
 ?>

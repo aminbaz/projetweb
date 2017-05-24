@@ -7,9 +7,9 @@
 
 	
 	$cookieId = $_COOKIE['codeconnexion'];
-	$information = Activite::Get_Activite_Type(3);
+	$information = Get_Activite_Type(3);
 	
-	$categorie = Utilisateur::Get_User_Categorie($cookieId);
+	$categorie = Get_User_Categorie($cookieId);
 	
 	require "view/type_activite.php";
 ?>

@@ -1,7 +1,5 @@
 <?php
-class Activite
-{
-	public static function Get_Activite($idActivite){
+	function Get_Activite($idActivite){
 				require_once('Pdo.php');
 				$bd=connexion();
 
@@ -14,7 +12,7 @@ class Activite
 			}
 
 
-	public static function Get_Activite_Type($id_type){
+	function Get_Activite_Type($id_type){
 				require_once('Pdo.php');
 				$bd=connexion();
 
@@ -28,7 +26,7 @@ class Activite
 
 	
 	
-	public static function Add_Activite($nom,$date,$description,$prix,$type,$cat)
+	function Add_Activite($nom,$date,$description,$prix,$type,$cat)
 				//User_Gender x User_Name x User_First_Name x User_Password x User_Mail =>
 				//données : $gender string correspondant au sexe de l'utilisateur à ajouter, $name string correspondant au nom de l'utilisateur, $firstName string correspondant au prénom de l'utilisateur, $password string correspondant au mot de passe de l'utilisateur, $mail string correspondant au mail de l'utilisateur
 				//résultat : modifie la base de données en ajoutant une entité à la classe "User" en fonction des données entrées
@@ -89,7 +87,7 @@ class Activite
 				}	
 
 
-	public static function Update_Activite($id,$nom,$date,$description,$prix)
+	function Update_Activite($id,$nom,$date,$description,$prix)
 				{
 					require_once('Pdo.php');
 					$bd=connexion();
@@ -105,7 +103,7 @@ class Activite
 					$req->execute();
 				}	
 
-	public static function Delete_Activite($id)
+	function Delete_Activite($id)
 				//User_Gender x User_Name x User_First_Name x User_Password x User_Mail =>
 				//données : $gender string correspondant au sexe de l'utilisateur à ajouter, $name string correspondant au nom de l'utilisateur, $firstName string correspondant au prénom de l'utilisateur, $password string correspondant au mot de passe de l'utilisateur, $mail string correspondant au mail de l'utilisateur
 				//résultat : modifie la base de données en ajoutant une entité à la classe "User" en fonction des données entrées
@@ -119,5 +117,5 @@ class Activite
 
 					$req->execute();
 				}	
-}
+
 ?>
