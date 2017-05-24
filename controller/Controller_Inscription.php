@@ -12,7 +12,7 @@
 
 	$mailverif=Check_Mail($mail);
 
-	if (empty($nom) || empty($prenom) || empty($sexe) || empty($datenaiss) || empty($password) || empty($password_check) || empty($mail) ) {
+	/*if (empty($nom) || empty($prenom) || empty($sexe) || empty($datenaiss) || empty($password) || empty($password_check) || empty($mail) ) {
 		$messageErreur = "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
 		
 		header("Location: ../Erreur.php?erreur=".$messageErreur);
@@ -40,6 +40,6 @@
 	{
 		$password = sha1(sha1($password));
 		Add_Utilisateur($nom,$prenom,$sexe,$datenaiss,$mail,$password);
-	}
+	}*/
 	header("Location: ../Connexion.php");
 ?>
