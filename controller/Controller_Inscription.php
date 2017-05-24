@@ -1,5 +1,5 @@
 <?php
-	require_once ('../model/Utilisateur.php');
+	/*require_once ('../model/Utilisateur.php');
 
 	$nom = htmlspecialchars($_POST['nom']);
 	$prenom = htmlspecialchars($_POST['prenom']);
@@ -40,6 +40,6 @@
 	{
 		$password = sha1(sha1($password));
 		Utilisateur::Add_Utilisateur($nom,$prenom,$sexe,$datenaiss,$mail,$password);
-	}
-	require("../Connexion.php");
+	}*/
+	header("Location: ../Connexion.php");
 ?>
