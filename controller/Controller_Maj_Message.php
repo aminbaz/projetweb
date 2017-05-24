@@ -1,6 +1,6 @@
 <?php
 
-require_once ("model/Message.php");
+require_once ("../model/Message.php");
 
 	$titre = htmlspecialchars($_POST['titre']);
 	$dateMes = htmlspecialchars($_POST['dateMes']);
