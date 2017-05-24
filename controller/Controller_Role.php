@@ -1,5 +1,5 @@
 <?php
-require_once ("model/Utilisateur.php");
+require_once ("../model/Utilisateur.php");
 
 $role = htmlspecialchars($_POST["role"]);
 $mail = htmlspecialchars($_POST["email"]);
@@ -30,7 +30,7 @@ elseif (!(filter_var($mail, FILTER_VALIDATE_EMAIL))) {
 else
 {
 	Set_User_Role($id,$numrole);
-	header("Location: Espace.php");
+	header("Location: ../Espace.php");
 
 }
 ?>
