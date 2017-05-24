@@ -41,5 +41,5 @@
 		$password = sha1(sha1($password));
 		Utilisateur::Add_Utilisateur($nom,$prenom,$sexe,$datenaiss,$mail,$password);
 	}
-	header("Location: ../Connexion.php");
+	require("../Connexion.php");
 ?>
