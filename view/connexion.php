@@ -32,26 +32,6 @@
       </div>
     </div>
     
-    <br>
-  
-    <div class="container">
-      <div class="row z-depth-4 grey lighten-5">
-        <form class="col s12" method="post" action="controller/Controller_Mot_De_Passe_Oublie.php">
-          <h5 class="center-align">Mot de passe oublié ?</h5>
-          <div class="row">
-            <div class="input-field col s9">
-              <input id="email" type="email" name="email" class="validate">
-              <label for="email" data-error="wrong" data-success="right">Email</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s9">
-              <button class="btn waves-effect waves-light grey" type="submit" name="action">Valider</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
     <?php require ("view/importscript.php");?>
   </body>
   </html>
