@@ -2,13 +2,13 @@
 <html lang="fr"> 
 
  <?php require ("view/header.php");?>
-  <body> 
+  <body class="back"> 
   <?php require ("view/entete.php");?>
   <?php require_once ("controller/Controller_Test_Connexion.php");
 
   ?>
 
-
+  <img class="responsive-img" src="image/background.jpg" alt="Photos d'hommes et de femmes" />
     <?php if(isConnected()){
       require_once("model/Message.php");
       $information = Get_Message();
