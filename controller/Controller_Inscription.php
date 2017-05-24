@@ -1,7 +1,7 @@
 <?php
 	require_once ('../model/Utilisateur.php');
 
-	/*$nom = htmlspecialchars($_POST['nom']);
+	$nom = htmlspecialchars($_POST['nom']);
 	$prenom = htmlspecialchars($_POST['prenom']);
 	$sexe = htmlspecialchars($_POST['sexe']);
 	$datenaiss = htmlspecialchars($_POST['dateNaiss']);
@@ -10,7 +10,7 @@
 	$password_check = htmlspecialchars($_POST['password_check']);
 	
 
-	$mailverif=Utilisateur::Check_Mail($mail);
+	/*$mailverif=Utilisateur::Check_Mail($mail);
 
 	if (empty($nom) || empty($prenom) || empty($sexe) || empty($datenaiss) || empty($password) || empty($password_check) || empty($mail) ) {
 		$messageErreur = "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
