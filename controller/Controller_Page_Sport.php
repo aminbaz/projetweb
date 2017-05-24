@@ -4,10 +4,10 @@
 
 	
 	//$cookieId = $_COOKIE['codeconnexion'];
-	//require_once("../model/Activite.php");
-	//$information = Get_Activite_Type(1);
+	require_once("../model/Activite.php");
+	$information = Get_Activite_Type(1);
 
-	require_once '/model/Utilisateur.php';
+	//require_once ('/model/Utilisateur.php');
 	
 	
 
