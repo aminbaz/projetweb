@@ -1,5 +1,5 @@
 <?php
-			require_once('Pdo.php');
+			
 
 			function Get_User($userId){
 				//require_once('Pdo.php');
@@ -99,10 +99,25 @@
 			//données : string correspondant au mail à vérifier
 			//résultat : renvoie un booleen pour savoir si le mail est déja utilisé
 			{
-				require_once('Pdo.php');
-				$bd=connexion();
+				//require_once('Pdo.php');
+				//$bd=connexion();
 
-			
+				$dbname = 'd5q4pq6s1eblro';
+			$host = 'ec2-54-247-166-129.eu-west-1.compute.amazonaws.com';
+			$dbuser = 'bjeocquzxzeuqh';
+			$dbpass = '70e714e41ab10e7ad78a08d680301ffcc762857eace102ae3fcbcba1d150728d';
+
+			try
+			{
+				$bd = new PDO("pgsql:host=$host;dbname=$dbname",$dbuser,$dbpass);
+				$bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			}
+			catch (PDOException $e)
+			{
+					echo $e->getMessage();
+					die('<br> Echec lors de la connexion à la BD');
+			}
+
 				$req = $bd->prepare("SELECT * FROM utilisateur WHERE mail='".$mail."'");
 				
 				$req->execute();
