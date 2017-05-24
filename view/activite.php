@@ -51,16 +51,12 @@
 
 
           <div class="row">
-            <div class="input-field col s9">
-              <input id="typeactivite" name="typeactivite" type="text" class="validate">
-              <select>
-                <option value="" disabled selected>Choisir le type</option>
-                <option value="sport">Sport</option>
-                <option value="culture">Culture</option>
-                <option value="scolaire">Scolaire</option>
-              </select>
-              <label for="typeactivite" data-error="wrong" data-success="right">Type</label>
-            </div>
+            <select>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
           </div>
 
           <div class="row">
