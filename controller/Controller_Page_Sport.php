@@ -1,6 +1,6 @@
 <?php
-	//require ("controller/Controller_Test_Connexion.php");
-	//onlineOnly();
+	require ("controller/Controller_Test_Connexion.php");
+	onlineOnly();
 
 	
 	$cookieId = $_COOKIE['codeconnexion'];
