@@ -4,7 +4,10 @@
  <?php require ("view/header.php");?>
   <body> 
   <?php require ("view/entete.php");?>
-  <?php require_once ("controller/Controller_Test_Connexion.php");?>
+  <?php require_once ("controller/Controller_Test_Connexion.php");
+
+  ?>
+
 
     <?php if(isConnected()){?>
       <div class="container"> 
