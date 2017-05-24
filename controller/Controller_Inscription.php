@@ -40,6 +40,7 @@
 	{
 		$password = sha1(sha1($password));
 		Add_Utilisateur($nom,$prenom,$sexe,$datenaiss,$mail,$password);
+		header("Location: ../Connexion.php");
 	}
-	header("Location: ../Connexion.php");
+	
 ?>
