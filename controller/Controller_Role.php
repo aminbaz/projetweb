@@ -30,7 +30,7 @@ elseif (!(filter_var($mail, FILTER_VALIDATE_EMAIL))) {
 else
 {
 	Set_User_Role($id,$numrole);
-	header("Location: ../Espace.php");
+	header("Location: Espace.php");
 
 }
 ?>
