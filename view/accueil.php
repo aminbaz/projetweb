@@ -9,7 +9,10 @@
   ?>
 
 
-    <?php if(isConnected()){?>
+    <?php if(isConnected()){
+      require_once("model/Message.php");
+      $information = Get_Message();
+      ?>
       <div class="container"> 
           <table class="bordered highlight centered ">
               <thead>
