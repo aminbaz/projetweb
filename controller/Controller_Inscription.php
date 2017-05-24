@@ -13,9 +13,9 @@
 	$mailverif=Check_Mail($mail);
 
 	if (empty($nom) || empty($prenom) || empty($sexe) || empty($datenaiss) || empty($password) || empty($password_check) || empty($mail) ) {
-		$messageErreur = "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
+		echo "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
 		
-		header("Location: ../Erreur.php?erreur=".$messageErreur);
+		//header("Location: ../Erreur.php?erreur=".$messageErreur);
 	}
 	elseif (strlen($password)<6) {
 		$messageErreur = 'Votre mot de passe doit faire plus de 6 caractères';
