@@ -10,9 +10,7 @@ require_once ("../model/Activite.php");
 
 
 	if (empty($nom) || empty($dateAct) || empty($description) || empty($prix) ) {
-		$messageErreur = "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
-		
-		header("Location: ../Erreur.php?erreur=".$messageErreur);
+		echo "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
 	}
 	else
 	{

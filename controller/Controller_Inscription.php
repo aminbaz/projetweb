@@ -14,27 +14,18 @@
 
 	if (empty($nom) || empty($prenom) || empty($sexe) || empty($datenaiss) || empty($password) || empty($password_check) || empty($mail) ) {
 		echo "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
-		
-		//header("Location: ../Erreur.php?erreur=".$messageErreur);
 	}
 	elseif (strlen($password)<6) {
-		$messageErreur = 'Votre mot de passe doit faire plus de 6 caractères';
-		
-		header("Location: ../Erreur.php?erreur=".$messageErreur);
+		echo "Votre mot de passe doit faire plus de 6 caractères";
 	}
 	elseif ($password != $password_check) {
-		$messageErreur = 'Les mots de passe saisies ne sont pas identiques ! ';
-		
-		header("Location: ../Erreur.php?erreur=".$messageErreur);
+		echo 'Les mots de passe saisies ne sont pas identiques ! ';
 	}
 	elseif (!(filter_var($mail, FILTER_VALIDATE_EMAIL))) {
-		$messageErreur = "Votre mail n'est pas valide  ! ";
-		
-		header("Location: ../Erreur.php?erreur=".$messageErreur);
+		echo "Votre mail n'est pas valide  ! ";
 	}
 	elseif (!(empty($mailverif['Utilisateur_Id']))) {
-		$messageErreur = "Ce mail est déjà associé à un compte !";
-		header("Location: ../Erreur.php?erreur=".$messageErreur);
+		echo "Ce mail est déjà associé à un compte !";
 	}
 	else
 	{

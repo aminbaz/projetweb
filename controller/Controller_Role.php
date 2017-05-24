@@ -18,14 +18,10 @@ else
 }
 
 if (empty($role) || empty($mail)) {
-	$messageErreur = "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
-	
-	header("Location: ../Erreur.php?erreur=".$messageErreur);
+	echo "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
 }
 elseif (!(filter_var($mail, FILTER_VALIDATE_EMAIL))) {
-	$messageErreur = "Votre email n'est pas valide  ! ";
-	
-	header("Location: ../Erreur.php?erreur=".$messageErreur);
+	echo "Votre email n'est pas valide  ! ";
 }
 else
 {

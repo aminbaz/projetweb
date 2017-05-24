@@ -11,9 +11,7 @@ require_once ("../model/Utilisateur.php");
 
 
 	if (empty($nom) || empty($prenom) || empty($sexe) || empty($datenaiss) ) {
-		$messageErreur = "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
-		
-		header("Location: ../Erreur.php?erreur=".$messageErreur);
+		echo "Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! ";
 	}
 	else
 	{
