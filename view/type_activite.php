@@ -91,7 +91,10 @@
                         echo "$nbinscrit[0]";
                         echo "</a></td>";
 
-                            if (empty(Check_Inscription($cookieId,$ligne['id_activite']))){
+                            if($ligne['place']>=$nbinscrit){
+                                  echo "<td>Complet</td>";
+                            }
+                            elseif (empty(Check_Inscription($cookieId,$ligne['id_activite']))){
                                   echo "<td> <a href='Inscription_Activite.php?id_activite=$ligne[id_activite]'>";
                                   echo "S'inscrire";
                                   echo "</a></td>";
