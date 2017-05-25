@@ -50,13 +50,16 @@
                         }
 
                         else{
-                            if (empty(Check_Encadrement($cookieId,$ligne['id_activite']))){
+                            if (empty(Check_Encadrement($cookieId,$ligne['id_activite']))&&empty(Check_Deja_Encadre($ligne['id_activite']))){
                                   echo "<td> <a href='Encadrement_Activite.php?id_activite=$ligne[id_activite]'>";
                                   echo "Encadrer";
                                   echo "</a></td>";
                             }
+                            elseif(empty(Check_Deja_Encadre($ligne['id_activite']))){
+                                  echo"<td></td>";
+                            }
                             else{
-                                  echo "<td> <a href='Non_Encadrement_Activite.php?id_activite=$ligne[id_activite]'>";
+                              echo "<td> <a href='Non_Encadrement_Activite.php?id_activite=$ligne[id_activite]'>";
                                   echo "Ne plus encadrer";
                                   echo "</a></td>";
                             }
