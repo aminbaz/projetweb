@@ -61,7 +61,7 @@
 
 					$req = $bd->prepare('SELECT U.nom, U.prenom FROM inscrire I, utilisateur U WHERE 
 						I.id_utilisateur=U.id_utilisateur
-						I.id_activite=:idActivite');
+						and I.id_activite=:idActivite');
 					$req->bindParam(':idActivite',$idActivite);
 
 					$req->execute();
