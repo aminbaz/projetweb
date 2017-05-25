@@ -95,19 +95,19 @@
                         echo "<td> <a href='Liste_Inscrit.php?id_activite=$ligne[id_activite]'>";
                         echo "$nbinscrit[0]";
                         echo "</a></td>";
-                            if(empty(Check_Inscription($cookieId,$ligne['id_activite'])) and $nbinscrit[0] <= $ligne['place']){
+                            /*if(empty(Check_Inscription($cookieId,$ligne['id_activite'])) and $nbinscrit[0] < $ligne['place']){
                                   echo "<td> <a href='Inscription_Activite.php?id_activite=$ligne[id_activite]'>";
                                   echo "S'inscrire";
                                   echo "</a></td>";
                             }
-                            elseif(!empty(Check_Inscription($cookieId,$ligne['id_activite'])) and $nbinscrit[0] <= $ligne['place']){
+                            elseif(!empty(Check_Inscription($cookieId,$ligne['id_activite'])) and $nbinscrit[0] <= $ligne['place']){*/
                                   echo "<td> <a href='Desinscription_Activite.php?id_activite=$ligne[id_activite]'>";
                                   echo "Désinscription";
                                   echo "</a></td>";
-                            }
+                            /*}
                             else{
                               echo "<td>Complet</td>";
-                            }
+                            }*/
                       }
                       echo "</tr>";
                 }                       
