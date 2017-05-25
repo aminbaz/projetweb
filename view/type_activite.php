@@ -61,7 +61,7 @@
                                   echo "</a></td>";
                             }
                             else{
-                                  echo"<td></td>";
+                                  echo"<td>Déja encadrer</td>";
                             }
                         }
                       echo "</tr>";
