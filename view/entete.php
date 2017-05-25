@@ -1,7 +1,7 @@
 <?php require_once ("controller/Controller_Test_Connexion.php");?>
 <nav>
 	<div class="nav-wrapper grey">
-		<a href="accueil" class="brand-logo left">Centre social de Naillac</a>
+		<a href="Accueil.php" class="brand-logo left">Centre social de Naillac</a>
 		<ul id="nav-mobile" class="right hide-on-med-and-down">
 			<li><a href="Accueil.php">Accueil</a></li>
 			<?php if(isConnected() and isAdmin()){?><li><a href="Espace.php">Gestion</a></li><?php } ?>
