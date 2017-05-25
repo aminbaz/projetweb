@@ -1,4 +1,7 @@
  <?php
+ 	require ("controller/Controller_Test_Connexion.php");
+	onlineOnly();
+
 	require_once ('../model/Activite.php');
 
 	$nom = htmlspecialchars($_POST['nom']);
