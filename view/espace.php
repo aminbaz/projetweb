@@ -63,7 +63,7 @@
       <div class="row z-depth-4 grey lighten-5">
        <form  method="post" action="Modification_Utilisateur.php">
           <h5 class="center-align">Changement donnée d'un utilisateur</h5>
-            <div class="row">
+            <div class="row" style="margin-left: 0rem;  margin-right: 0rem; ">
               <div class="input-field col s9">
                 <input id="email" name="email" type="email" class="validate">
                 <label for="email" data-error="wrong" data-success="right">Email</label>
