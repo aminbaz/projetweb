@@ -49,7 +49,7 @@
 
           <div class="row"> 
             <div class="input-field col s9"> 
-              <input id="dateNaiss" name="dateNaiss" type="date" class="validate"> 
+              <input id="dateNaiss" name="dateNaiss" type="date" class="datepicker"> 
               <label for="dateNaiss" data-error="wrong" data-success="right">Date de naissance</label> 
             </div> 
           </div>        
