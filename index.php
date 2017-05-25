@@ -1,3 +1,3 @@
 <?php 
-	header("view/accueil.php");	
+	require_once("Accueil.php");	
 ?>
