@@ -1,6 +1,9 @@
 <?php
 			
 			function Get_User($userId){
+				//Fonction permettant de récupérer toutes les informations sur un utilisateur
+				//Prends en argument l'identifiant de l'utilisateur
+				//Renvoi une ligne sous forme de tableau reprenant toutes les informations
 
 				require_once('pdo.php');
 				$bd=connexion();
@@ -14,8 +17,10 @@
 				return $data;
 			}
 
-			function Check_Password($userPassword,$userMail)
-			{
+			function Check_Password($userPassword,$userMail){
+				//Fonction permettant de vérifier si le mot de passe appartient bien au mail qui est unique
+				//Prends en argument le mot de passe et le mail de l'utilisateur
+				//renvoi un boolean vrai si le mot de passe est bon
 				require_once('pdo.php');
 				$bd=connexion();
 				$req = $bd->prepare("SELECT mdp FROM utilisateur WHERE mail='".$userMail."'");
@@ -28,7 +33,7 @@
 			}
 
 			function Get_User_Id($userMail){
-				
+				//Fonction permettant de récupérer l'identifiant de l'utilisateur à partir de son mail
 				require_once('pdo.php');
 				$bd=connexion();
 
@@ -42,6 +47,8 @@
 			}
 
 			function Check_Mail($mail){
+				//Fonction permettant de vérifier si le mail entré en argument de la fonction n'est pas déjà présent dans la base de données 
+				//vérifier si la fonction renvoi vide lors de son utilisation
 
 				require_once('pdo.php');
 				$bd=connexion();
@@ -55,10 +62,12 @@
 			}
 
 			function Add_Utilisateur($nom,$prenom,$sexe,$datenaiss,$mail,$mdp){
+				//Fonction permettant d'ajouter un utilisateur 
 
 				require_once('pdo.php');
 				$bd=connexion();
 
+				//Calcul de sont àage afin de le classer dans une catégorie d'âge
 				$age = (time() - strtotime($datenaiss)) / 3600 / 24 / 365;
 				if ($age < 11) {
 					$categorie = 1;
@@ -84,7 +93,10 @@
 				$req->execute();
 			}
 
+
 			function Set_User_Role($userId,$roleId){
+				//Procédure permettant de modifier le statue d'un utilisateur
+				//Prends en argument l'identifiant de l'utilisateur et l'identifiant du role
 				require_once('pdo.php');
 				$bd=connexion();
 
@@ -96,6 +108,7 @@
 			}
 
 			function Get_User_Role($userId){
+				//Fonction permettant de récupérer le rôle d'un utilisateur à partir de son identifiant
 				
 				require_once('pdo.php');
 				$bd=connexion();
@@ -109,6 +122,8 @@
 			}
 
 			function Get_User_Categorie($userId){
+				//Fonction permettant de récupérer la catégorie d'âge auquel l'utilisateur appartient
+				//Prends en argument l'identifiant de l'utilisateur
 
 				require_once('pdo.php');
 				$bd=connexion();
@@ -122,6 +137,8 @@
 			}
 
 			function Get_Activite_Adherent($userId){
+				//Fonction permettant de récupérer toutes les données des activités auxquel l'adhérent est inscrit
+				//Prends en arguments l'identifiant de l'adhérent
 				
 				require_once('pdo.php');
 				$bd=connexion();
@@ -134,6 +151,8 @@
 			}
 
 			function Get_Activite_Animateur($userId){
+				//Fonction permettant de récupérer toutes les données des activités auxquel l'animateur est inscrit en tant que encadrant
+				//Prends en arguments l'identifiant de l'animateur
 				
 				require_once('pdo.php');
 				$bd=connexion();
@@ -147,6 +166,9 @@
 
 
 			function Get_Responsable_Activite($idActivite){
+				//Fonction permettant de récupérer l'animateur qui encadre l'activité
+				//Prends en arguments l'identifiant de l'activité
+				//Renvoi toutes les informations sur l'encadrant et l'activité
 				
 				require_once('pdo.php');
 				$bd=connexion();
@@ -162,6 +184,7 @@
 
 
 			function Update_User($id,$name,$firstName,$gender,$datenaiss){
+				//Procédure permettant de modifier les informations d'un utilisateur
 				
 				require_once('pdo.php');
 				$bd=connexion();
@@ -178,6 +201,8 @@
 			}
 
 			function Update_Password($id,$mdp){
+				//Fonction permettant de modifier le mot de passe d'un utlisateur 
+				//Prends en argument l'identifiant de l'utilisateur et son nouveau mot de passe, le mot de passe doit être crypté
 				
 				require_once('pdo.php');
 				$bd=connexion();

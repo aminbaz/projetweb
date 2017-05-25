@@ -20,6 +20,7 @@
 	{
 		$password = sha1(sha1($password));
 		Update_Password($cookieId,$password);
+		//deconnxion pour tester le mot de passe immédiatement
 		setcookie("codeconnexion","", time() , "/");
 		header("Location: ../Connexion.php");
 	}

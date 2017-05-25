@@ -1,6 +1,6 @@
 <?php
-function connexion()
-{
+function connexion(){
+	//Fonction permettant une connection à la base de donnée qui sera à récupérer dans une variable
 	$dbname = 'd5q4pq6s1eblro';
 	$host = 'ec2-54-247-166-129.eu-west-1.compute.amazonaws.com';
 	$dbuser = 'bjeocquzxzeuqh';

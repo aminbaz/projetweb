@@ -18,6 +18,7 @@
               <thead>
                 <tr>
                     <th>Message</th>
+                    <th>Date de publication</th>
                 </tr>
               </thead>
 
@@ -26,6 +27,7 @@
                   while($ligne=$information->fetch()){
                       echo "<tr>";
                       echo "<td> $ligne[lib_message]</td>";
+                      echo "<td> $ligne[date_message]</td>";
                       echo "<td> $ligne[texte_message]</td>";
                       if (isAdmin()){
                         echo "<td> <a href='Modification_Message.php?id_message=$ligne[id_message]'>";

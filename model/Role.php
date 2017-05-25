@@ -1,5 +1,6 @@
 <?php
 	function Get_Role($roleId){
+		//Fonction qui renvoi le role d'un utilisateur (Animateur, Administrateur ou Adhérent)
 		
 		require_once('pdo.php');
 		$bd=connexion();

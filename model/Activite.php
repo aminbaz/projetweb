@@ -1,6 +1,8 @@
 <?php
 	function Get_Activite($idActivite){
-
+				//Fonction permettant de récupérer les données d'une activité
+				//Identifiant de l'activité en argument
+				//renvoi les donnée de l'activité
 				require_once('pdo.php');
 				$bd=connexion();
 				
@@ -12,18 +14,10 @@
 				return $req;
 			}
 
-	function Get_All_Activite(){
-
-				require_once('pdo.php');
-				$bd=connexion();
-				
-				$req = $bd->prepare("SELECT * FROM activite");
-				$req->execute();
-
-				return $req;
-			}
-
 	function Get_Activite_Type($id_type){
+				//Fonction permettant de récupérer toutes les activité selon un type
+				//Identifiant du type souhaité
+				//renvoi les donnée des activité correspondant au type
 
 				require_once('pdo.php');
 				$bd=connexion();
@@ -39,6 +33,8 @@
 	
 	
 	function Add_Activite($nom,$date,$description,$prix,$type,$cat,$place){
+				//Fonction permettant d'ajouter une activité
+				//En argument toutes les information à entrer dans la base de données
 					
 					require_once('pdo.php');
 					$bd=connexion();
@@ -97,6 +93,8 @@
 
 
 	function Update_Activite($id,$nom,$date,$description,$prix,$place){
+				//Fonction permettant de modifier les données d'une activité existante
+				//Identifiant de l'activité en argument suivi de toutes les données qui composeront cette activité
 
 					require_once('pdo.php');
 					$bd=connexion();
@@ -113,7 +111,9 @@
 				}	
 
 	function Delete_Activite($id){
-					
+				//Fonction permettant de supprimer une activité de notre table
+				//Identifiant de l'activité en argument
+
 					require_once('pdo.php');
 					$bd=connexion();
 					
