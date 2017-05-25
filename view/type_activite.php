@@ -35,7 +35,9 @@
                         echo "<td> $ligne[date_activite]</td>";
                         echo "<td> $ligne[description]</td>";
                         echo "<td> $ligne[prix]</td>";
-                        echo "<td>$nbinscrit[0]</td>";
+                        echo "<td> <a href='Liste_Inscrit.php?id_activite=$ligne[id_activite]'>";
+                        echo "$nbinscrit[0]";
+                        echo "</a></td>";
 
                 
                         if (isAdmin()){
@@ -82,7 +84,9 @@
                         echo "<td> $ligne[date_activite]</td>";
                         echo "<td> $ligne[description]</td>";
                         echo "<td> $ligne[prix]</td>";
-                        echo "<td>$nbinscrit[0]</td>";
+                        echo "<td> <a href='Liste_Inscrit.php?id_activite=$ligne[id_activite]'>";
+                        echo "$nbinscrit[0]";
+                        echo "</a></td>";
 
                             if (empty(Check_Inscription($cookieId,$ligne['id_activite']))){
                                   echo "<td> <a href='Inscription_Activite.php?id_activite=$ligne[id_activite]'>";
