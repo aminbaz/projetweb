@@ -55,13 +55,13 @@
                                   echo "Encadrer";
                                   echo "</a></td>";
                             }
-                            elseif(Check_Deja_Encadre($ligne['id_activite'])){
-                                  echo"<td></td>";
-                            }
-                            else{
-                              echo "<td> <a href='Non_Encadrement_Activite.php?id_activite=$ligne[id_activite]'>";
+                            elseif(!empty(Check_Encadrement($cookieId,$ligne['id_activite']))){
+                                  echo "<td> <a href='Non_Encadrement_Activite.php?id_activite=$ligne[id_activite]'>";
                                   echo "Ne plus encadrer";
                                   echo "</a></td>";
+                            }
+                            else{
+                                  echo"<td></td>";
                             }
                         }
                       echo "</tr>";
