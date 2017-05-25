@@ -81,7 +81,10 @@
 
                 else{
                  if($categorie == $ligne['id_categorie'] or $ligne['id_categorie'] == 5){
-                        echo "<tr>";
+                        echo "<tr class = grey";
+
+
+                        echo ">";
                         echo "<td> $ligne[nom_activite]</td>";
                         echo "<td> $ligne[date_activite]</td>";
                         echo "<td> $ligne[description]</td>";
@@ -91,7 +94,7 @@
                         echo "$nbinscrit[0]";
                         echo "</a></td>";
 
-                            if($ligne['place']>=$nbinscrit){
+                            if($ligne['place']==$nbinscrit){
                                   echo "<td>Complet</td>";
                             }
                             elseif (empty(Check_Inscription($cookieId,$ligne['id_activite']))){
