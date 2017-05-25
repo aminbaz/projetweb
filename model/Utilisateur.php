@@ -11,7 +11,7 @@
 				$req->execute();
 				$data=$req->fetch();
 
-				return $data; //Verifier si null
+				return $data;
 			}
 
 			function Check_Password($userPassword,$userMail)
@@ -38,7 +38,7 @@
 				$req->execute();
 				$data=$req->fetch();
 
-				return $data["id_utilisateur"]; //Verifier si null
+				return $data["id_utilisateur"];
 			}
 
 			function Check_Mail($mail){

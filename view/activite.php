@@ -48,12 +48,19 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row"> 
             <div class="input-field col s9">
-              <input id="typeactivite" name="typeactivite" type="text" class="validate">
-              <label for="typeactivite" data-error="wrong" data-success="right">Type</label>
+              <select name="typeactivite">
+                <option value="" disabled selected>Choisir</option>
+                <option value="sport">Sport</option>
+                <option value="culturel">Culturel</option>
+                <option value="scolaire">Scolaire</option>
+                <option value="voyage">Voyage</option>
+                <option value="jeu">Jeu</option>
+              </select>
+              <label>Type d'activité</label>
             </div>
-          </div>
+          </div> 
 
           <div class="row">
             <div class="input-field col s9">
