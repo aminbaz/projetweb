@@ -55,7 +55,7 @@
                                   echo "Encadrer";
                                   echo "</a></td>";
                             }
-                            elseif(empty(Check_Deja_Encadre($ligne['id_activite']))){
+                            elseif(Check_Deja_Encadre($ligne['id_activite'])){
                                   echo"<td></td>";
                             }
                             else{
