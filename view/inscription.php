@@ -20,12 +20,33 @@
               <label for="prenom" data-error="wrong" data-success="right">Prénom</label> 
             </div> 
           </div> 
+
+
+
+
           <div class="row"> 
             <div class="input-field col s9"> 
               <input id="sexe" name="sexe" type="text" class="validate"> 
               <label for="sexe" data-error="wrong" data-success="right">Sexe</label> 
             </div> 
           </div> 
+
+
+          <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            <label>Materialize Select</label>
+          </div>
+
+
+
+
+
+
           <div class="row"> 
             <div class="input-field col s9"> 
               <input id="dateNaiss" name="dateNaiss" type="date" class="validate"> 
