@@ -82,7 +82,7 @@
                 else{
                  if($categorie == $ligne['id_categorie'] or $ligne['id_categorie'] == 5){
                         if($nbinscrit == $ligne['place']){
-                          echo "<tr class = grey>"
+                          echo "<tr class = 'grey'>"
                         }
                         else{
                           echo "<tr>";
