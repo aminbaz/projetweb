@@ -62,12 +62,18 @@
             </div>
           </div> 
 
-          <div class="row">
+          <div class="row"> 
             <div class="input-field col s9">
-              <input id="categorie" name="categorie" type="text" class="validate">
-              <label for="categorie" data-error="wrong" data-success="right">Categorie d'âge des adhérents (champs non obligatoire)</label>
+              <select name="categorie">
+                <option value="" disabled selected>Choisir</option>
+                <option value="-10"> moins de 10 ans</option>
+                <option value="-15">moins de 15 ans</option>
+                <option value="-20">moins de 20 ans</option>
+                <option value="+21">plus de 21 ans</option>
+              </select>
+              <label>Catégorie d'âge (champs non obligatoire)</label>
             </div>
-          </div>
+          </div> 
           <div class="row">
             <div class="input-field col s9">
               <button class="btn waves-effect waves-light grey" type="submit" name="action" value="valider">Ajouter</button>
