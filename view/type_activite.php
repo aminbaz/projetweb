@@ -40,7 +40,7 @@
                         echo "<td> $ligne[nom_activite]</td>";
                         echo "<td> $ligne[date_activite]</td>";
                         echo "<td> $ligne[description]</td>";
-                        echo "<td> $ligne[prix]</td>";
+                        echo "<td> $ligne[prix] €</td>";
                         echo "<td> $ligne[place]</td>";
                         echo "<td> <a href='Liste_Inscrit.php?id_activite=$ligne[id_activite]'>";
                         echo "$nbinscrit[0]";
@@ -95,7 +95,7 @@
                         echo "<td> $ligne[nom_activite]</td>";
                         echo "<td> $ligne[date_activite]</td>";
                         echo "<td> $ligne[description]</td>";
-                        echo "<td> $ligne[prix]</td>";
+                        echo "<td> $ligne[prix] €</td>";
                         echo "<td> $ligne[place]</td>";
                         echo "<td> <a href='Liste_Inscrit.php?id_activite=$ligne[id_activite]'>";
                         echo "$nbinscrit[0]";
