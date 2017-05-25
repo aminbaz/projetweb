@@ -29,7 +29,7 @@
           </div>
           <div class="row">
             <div class="input-field col s9">
-              <input id="datenaiss" name="datenaiss" type="date" class="validate" value=<?php echo $information['date_naiss'] ?>>
+              <input id="datenaiss" name="datenaiss" type="date" class="datepicker" value=<?php echo $information['date_naiss'] ?>>
               <label for="datenaiss" data-error="wrong" data-success="right">Date de naissance</label>
             </div>
           </div>

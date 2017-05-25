@@ -17,7 +17,7 @@
           </div>
          <div class="row">
             <div class="input-field col s9">
-              <input id="dateMes" name="dateMes" type="date" class="validate" value=<?php echo $information['date_message'] ?>>
+              <input id="dateMes" name="dateMes" type="date" class="datepicker" value=<?php echo $information['date_message'] ?>>
               <label for="dateMes" data-error="wrong" data-success="right">Date de publication</label>
             </div>
           </div>

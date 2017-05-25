@@ -17,7 +17,7 @@
           </div>
          <div class="row">
             <div class="input-field col s9">
-              <input id="dateAct" name="dateAct" type="date" class="validate" value=<?php echo $information['date_activite'] ?>>
+              <input id="dateAct" name="dateAct" type="date" class="datepicker" value=<?php echo $information['date_activite'] ?>>
               <label for="dateAct" data-error="wrong" data-success="right">Date activité</label>
             </div>
           </div>

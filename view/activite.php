@@ -31,7 +31,7 @@
           </div>
            <div class="row">
             <div class="input-field col s9">
-              <input id="dateactivite" name="dateactivite" type="date" class="validate">
+              <input id="dateactivite" name="dateactivite" type="date" class="datepicker">
               <label for="dateactivite" data-error="wrong" data-success="right">Date</label>
             </div>
           </div>

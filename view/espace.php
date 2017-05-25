@@ -45,7 +45,7 @@
           </div>
           <div class="row">
             <div class="input-field col s9">
-              <input id="texte" name="texte" type="text" class="input-field materialize-textarea">
+              <input id="texte" name="texte" type="text" class="materialize-textarea">
               <label for="texte" data-error="wrong" data-success="right">Saisir le message</label>
             </div>
           </div>
