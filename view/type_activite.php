@@ -81,12 +81,12 @@
 
                 else{
                  if($categorie == $ligne['id_categorie'] or $ligne['id_categorie'] == 5){
-                        if($nbinscrit == $ligne['place']){
+                       // if($nbinscrit == $ligne['place']){
                           echo "<tr class = 'grey'>";
-                        }
-                        else{
-                          echo "<tr>";
-                        }
+                        //}
+                        //else{
+                         // echo "<tr>";
+                        //}
                         echo "<td> $ligne[nom_activite]</td>";
                         echo "<td> $ligne[date_activite]</td>";
                         echo "<td> $ligne[description]</td>";
@@ -95,11 +95,7 @@
                         echo "<td> <a href='Liste_Inscrit.php?id_activite=$ligne[id_activite]'>";
                         echo "$nbinscrit[0]";
                         echo "</a></td>";
-
-                            if($ligne['place']==$nbinscrit){
-                                  echo "<td>Complet</td>";
-                            }
-                            elseif (empty(Check_Inscription($cookieId,$ligne['id_activite']))){
+                            if(empty(Check_Inscription($cookieId,$ligne['id_activite']))){
                                   echo "<td> <a href='Inscription_Activite.php?id_activite=$ligne[id_activite]'>";
                                   echo "S'inscrire";
                                   echo "</a></td>";
