@@ -33,6 +33,12 @@
               <label for="prix" data-error="wrong" data-success="right">Prix (champs non obligatoire)</label>
             </div>
           </div>
+          <div class="row">
+            <div class="input-field col s9">
+              <input id="place" name="place" type="number" class="validate" value=<?php echo $information['place'] ?>>
+              <label for="place" data-error="wrong" data-success="right">Nombre de place</label>
+            </div>
+          </div>
           <input type="hidden" name="id_activite" id="id_activite" value=<?php echo $information['id_activite'] ?>>
           <div class="row">
             <div class="input-field col s9">

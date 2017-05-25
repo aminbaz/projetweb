@@ -28,7 +28,7 @@
 
 	
 	
-	function Add_Activite($nom,$date,$description,$prix,$type,$cat){
+	function Add_Activite($nom,$date,$description,$prix,$type,$cat,$place){
 					
 					require_once('pdo.php');
 					$bd=connexion();
@@ -73,29 +73,31 @@
 						$codeprix = $prix;
 					}
 					
-					$req = $bd->prepare('INSERT INTO activite(nom_activite, description, prix, id_type, date_activite, id_categorie) VALUES (:nom, :description,:codeprix,:codetype,:dateActivite,:categorie)');
+					$req = $bd->prepare('INSERT INTO activite(nom_activite, description, prix, id_type, date_activite, id_categorie, place) VALUES (:nom, :description,:codeprix,:codetype,:dateActivite,:categorie, :place)');
 					$req->bindParam(':nom',$nom);
 					$req->bindParam(':dateActivite',$date);
 					$req->bindParam(':description',$description);
 					$req->bindParam(':codeprix',$codeprix);
 					$req->bindParam(':codetype',$codetype);
 					$req->bindParam(':categorie',$categorie);
+					$req->bindParam(':place',$place);
 
 					$req->execute();
 				}	
 
 
-	function Update_Activite($id,$nom,$date,$description,$prix){
+	function Update_Activite($id,$nom,$date,$description,$prix,$place){
 
 					require_once('pdo.php');
 					$bd=connexion();
 
-					$req = $bd->prepare('UPDATE activite set nom_activite=:nom, description=:description, prix=:prix, date_activite=:dateAct where id_activite=:id');
+					$req = $bd->prepare('UPDATE activite set nom_activite=:nom, description=:description, prix=:prix, date_activite=:dateAct, place=:place where id_activite=:id');
 					$req->bindParam(':id',$id);
 					$req->bindParam(':nom',$nom);
 					$req->bindParam(':dateAct',$date);
 					$req->bindParam(':description',$description);
 					$req->bindParam(':prix',$prix);
+					$req->bindParam(':place',$place);
 					
 					$req->execute();
 				}	

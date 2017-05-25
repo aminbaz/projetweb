@@ -16,6 +16,7 @@
               <th>Date</th>
               <th>Description</th>
               <th>Prix</th>
+              <th>Place</th>
               <th>Participant</th>;
               <?php if(isAdmin()){
                 echo "<th>Responsable</th>";
@@ -35,6 +36,7 @@
                         echo "<td> $ligne[date_activite]</td>";
                         echo "<td> $ligne[description]</td>";
                         echo "<td> $ligne[prix]</td>";
+                        echo "<td> $ligne[place]</td>";
                         echo "<td> <a href='Liste_Inscrit.php?id_activite=$ligne[id_activite]'>";
                         echo "$nbinscrit[0]";
                         echo "</a></td>";
@@ -84,6 +86,7 @@
                         echo "<td> $ligne[date_activite]</td>";
                         echo "<td> $ligne[description]</td>";
                         echo "<td> $ligne[prix]</td>";
+                        echo "<td> $ligne[place]</td>";
                         echo "<td> <a href='Liste_Inscrit.php?id_activite=$ligne[id_activite]'>";
                         echo "$nbinscrit[0]";
                         echo "</a></td>";

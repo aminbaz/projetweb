@@ -24,7 +24,7 @@
                         echo "<td> $ligne[nom]</td>";
                         echo "<td> $ligne[prenom]</td>";
                         echo "</a></td>";
-                         echo "</tr>";
+                        echo "</tr>";
 
                 }
         ?>

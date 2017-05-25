@@ -14,6 +14,7 @@
               <th>Date</th>
               <th>Description</th>
               <th>Prix</th>
+              <th>Place</th>
           </tr>
         </thead>
 
@@ -25,6 +26,7 @@
                 echo "<td> $ligne[date_activite]</td>";
                 echo "<td> $ligne[description]</td>";
                 echo "<td> $ligne[prix]</td>";
+                echo "<td> $ligne[place]</td>";
                 echo "</tr>";                           
            }
         ?>
