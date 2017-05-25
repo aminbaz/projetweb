@@ -61,11 +61,10 @@
 
 					$req = $bd->prepare('SELECT U.nom, U.prenom FROM inscrire I, utilisateur U WHERE 
 						I.id_utilisateur=U.id_utilisateur
-						and I.id_activite=:idActivite');
+						and I.id_activite=:idActivite ORDER BY U.nom');
 					$req->bindParam(':idActivite',$idActivite);
 
 					$req->execute();
-					//$data=$req->fetch();
 
 					return ($req);
 				}

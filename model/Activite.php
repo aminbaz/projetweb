@@ -4,7 +4,7 @@
 				require_once('pdo.php');
 				$bd=connexion();
 				
-				$req = $bd->prepare("SELECT * FROM activite WHERE id_activite = :idActivite");
+				$req = $bd->prepare("SELECT * FROM activite WHERE id_activite = :idActivite ORDER BY date_activite DESC");
 				$req->bindParam(':idActivite',$idActivite);
 
 				$req->execute();
@@ -18,7 +18,7 @@
 				require_once('pdo.php');
 				$bd=connexion();
 
-				$req = $bd->prepare("SELECT * FROM activite WHERE id_type = :id_type");
+				$req = $bd->prepare("SELECT * FROM activite WHERE id_type = :id_type ORDER BY date_activite DESC");
 				$req->bindParam(':id_type',$id_type);
 
 				$req->execute();
