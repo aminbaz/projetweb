@@ -69,7 +69,7 @@
                 <label for="email" data-error="wrong" data-success="right">Email</label>
               </div>
             </div>
-            <div class="row">
+            <div class="row" style="margin-left: 0rem;  margin-right: 0rem; ">
               <div class="input-field col s9">
                 <button class="btn waves-effect waves-light grey" type="submit" name="action" value="valider">Changement</button>
               </div>
