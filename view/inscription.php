@@ -21,33 +21,16 @@
             </div> 
           </div> 
 
-
-
-
-          <div class="row"> 
-            <div class="input-field col s9"> 
-              <input id="sexe" name="sexe" type="text" class="validate"> 
-              <label for="sexe" data-error="wrong" data-success="right">Sexe</label> 
-            </div> 
-          </div> 
-
-
            <div class="row"> 
             <div class="input-field col s9">
               <select>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
+                <option value="" disabled selected>Choisir</option>
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
               </select>
-              <label>Materialize Select</label>
+              <label>Sexe</label>
             </div>
           </div> 
-
-
-
-
-
 
           <div class="row"> 
             <div class="input-field col s9"> 
