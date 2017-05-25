@@ -53,4 +53,20 @@
 
 					return ($data);
 				}
+
+	function Liste_Inscription($idActivite)
+				{
+					require_once('pdo.php');
+					$bd=connexion();
+
+					$req = $bd->prepare('SELECT U.nom, U.prenom FROM inscrire I, utilisateur U WHERE 
+						I.id_utilisateur=U.id_utilisateur
+						I.id_activite=:idActivite');
+					$req->bindParam(':idActivite',$idActivite);
+
+					$req->execute();
+					//$data=$req->fetch();
+
+					return ($req);
+				}
 ?>
