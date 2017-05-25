@@ -31,7 +31,12 @@
                  $nbinscrit = Nombre_Inscription($ligne['id_activite']);
                 if(isAdmin() or isAnimateur()){
                   $responsable = Get_Responsable_Activite($ligne['id_activite']);
-                       echo "<tr>";
+                       if($nbinscrit[0] == $ligne['place']){
+                          echo "<tr class = 'brown lighten-5'>";
+                        }
+                        else{
+                          echo "<tr>";
+                        }
                         echo "<td> $ligne[nom_activite]</td>";
                         echo "<td> $ligne[date_activite]</td>";
                         echo "<td> $ligne[description]</td>";
@@ -82,7 +87,7 @@
                 else{
                  if($categorie == $ligne['id_categorie'] or $ligne['id_categorie'] == 5){
                         if($nbinscrit[0] == $ligne['place']){
-                          echo "<tr class = 'grey'>";
+                          echo "<tr class = 'brown lighten-5'>";
                         }
                         else{
                           echo "<tr>";
