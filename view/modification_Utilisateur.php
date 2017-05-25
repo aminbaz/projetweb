@@ -45,7 +45,7 @@
     </div>
 
     <div class="input-field col s9  center-align">
-              <a class="btn waves-effect waves-light grey" href="controller/Controller_Initialisation_Mdp.php?id_utilisateur=$information[id_utilisateur]">Réinitialiser son mot de passe ?</a>
+              <a class="btn waves-effect waves-light grey" href=<?php echo "Initialisation_Mdp.php?id_utilisateur=$information[id_utilisateur]"?>>Réinitialiser son mot de passe ? </a>
     </div>
 
     <?php require ("view/importscript.php");?>
