@@ -7,7 +7,7 @@
 
        <div class="container">
           <div class="collection">
-            <h5 class="center-align">Categorie d'activité</h5>
+            <h5 class="center-align">Catégorie d'activité</h5>
             <a href="Sport.php" class="collection-item brown-text">Sport</a>
             <a href="Culturel.php" class="collection-item brown-text">Culturel</a>
             <a href="Scolaire.php" class="collection-item brown-text">Scolaire</a>

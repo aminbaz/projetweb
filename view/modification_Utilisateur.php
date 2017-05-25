@@ -33,6 +33,7 @@
               <label for="datenaiss" data-error="wrong" data-success="right">Date de naissance</label>
             </div>
           </div>
+          <input type="hidden" name="id_utilisateur" id="id_utilisateur" value=<?php echo $information['id_utilisateur'] ?>>
           <div class="row">
             <div class="input-field col s9">
               <button class="btn waves-effect waves-light grey" type="submit" id="submit" value="valider">Modifier
