@@ -23,7 +23,7 @@
           </div>
           <div class="row">
             <div class="input-field col s9">
-              <input id="texte" name="texte" type="text" class="validate" value=<?php echo $information['texte_message'] ?>>
+              <input id="texte" name="texte" type="text" class="materialize-textarea" value=<?php echo $information['texte_message'] ?>>
               <label for="texte" data-error="wrong" data-success="right">Texte</label>
             </div>
           </div>

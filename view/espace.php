@@ -15,12 +15,17 @@
                 <label for="email" data-error="wrong" data-success="right">Email</label>
               </div>
             </div>
-            <div class="row">
-              <div class="input-field col s9">
-                <input id="role" name="role" type="text" class="validate">
-                <label for="role" data-error="wrong" data-success="right">Role</label>
-              </div>
+            <div class="row"> 
+            <div class="input-field col s9">
+              <select name="role">
+                <option value="" disabled selected>Choisir</option>
+                <option value="adherent">Adhérent</option>
+                <option value="animateur">Animateur</option>
+                <option value="administrateur">Administrateur</option>
+              </select>
+              <label>Rôle</label>
             </div>
+          </div> 
             <div class="row">
               <div class="input-field col s9">
                 <button class="btn waves-effect waves-light grey" type="submit" name="action" value="valider">Changement</button>
@@ -40,7 +45,7 @@
           </div>
           <div class="row">
             <div class="input-field col s9">
-              <input id="texte" name="texte" type="text" class="validate">
+              <input id="texte" name="texte" type="text" class="materialize-textarea">
               <label for="texte" data-error="wrong" data-success="right">Saisir le message</label>
             </div>
           </div>
