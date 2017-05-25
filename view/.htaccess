@@ -4,4 +4,4 @@ Options +FollowSymlinks
 
 RewriteEngine on
 
-RewriteRule ^/accueil$ /accueil.php [L]
+RewriteRule ^/accueil$ accueil.php [L]
