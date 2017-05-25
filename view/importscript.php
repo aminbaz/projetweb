@@ -19,4 +19,8 @@
 	  });</script>
 
 	  <script> $(".button-collapse").sideNav(); </script>
+
+	   <script>  $('#textarea1').val('New Text');
+ 		 $('#textarea1').trigger('autoresize')
+ 		</script>
       
