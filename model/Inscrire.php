@@ -121,8 +121,8 @@
 					$req->bindParam(':idActivite',$idActivite);
 
 					$req->execute();
-					//$data=$req->fetch();
+					$data=$req->fetch();
 
-					return ($req);
+					return ($data);
 				}
 ?>

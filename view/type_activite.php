@@ -18,7 +18,7 @@
               <th>Prix</th>
               <?php if(isAdmin()){
                 echo "<th>Responsable</th>";
-                echo "<th>Nombre Inscription</th>";
+                echo "<th>Participant</th>";
               }
               ?>
           </tr>
