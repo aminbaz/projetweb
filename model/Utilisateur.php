@@ -126,7 +126,7 @@
 				require_once('pdo.php');
 				$bd=connexion();
 
-				$req = $bd->prepare("SELECT A.id_activite, A.nom_activite, A.description, A.prix, A.date_activite FROM activite A, inscrire I, utilisateur U WHERE A.id_activite = I.id_activite and I.id_utilisateur = U.id_utilisateur and U.id_utilisateur = :userId ");
+				$req = $bd->prepare("SELECT A.id_activite, A.nom_activite, A.description, A.prix, A.date_activite, A.place FROM activite A, inscrire I, utilisateur U WHERE A.id_activite = I.id_activite and I.id_utilisateur = U.id_utilisateur and U.id_utilisateur = :userId ");
 				$req->bindParam(':userId',$userId);
 				$req->execute();
 				
@@ -138,7 +138,7 @@
 				require_once('pdo.php');
 				$bd=connexion();
 
-				$req = $bd->prepare("SELECT A.id_activite, A.nom_activite, A.description, A.prix, A.date_activite FROM activite A, encadrer E, utilisateur U WHERE A.id_activite = E.id_activite and E.id_utilisateur = U.id_utilisateur and U.id_utilisateur = :userId ");
+				$req = $bd->prepare("SELECT A.id_activite, A.nom_activite, A.description, A.prix, A.date_activite, A.place FROM activite A, encadrer E, utilisateur U WHERE A.id_activite = E.id_activite and E.id_utilisateur = U.id_utilisateur and U.id_utilisateur = :userId ");
 				$req->bindParam(':userId',$userId);
 				$req->execute();
 				
