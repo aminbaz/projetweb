@@ -25,8 +25,8 @@
             <div class="input-field col s9">
               <select>
                 <option value="" disabled selected>Choisir</option>
-                <option value="homme">Homme</option>
-                <option value="femme">Femme</option>
+                <option name="sexe" value="homme">Homme</option>
+                <option name="sexe" value="femme">Femme</option>
               </select>
               <label>Sexe</label>
             </div>
