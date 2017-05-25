@@ -30,7 +30,7 @@
           <div class="row">
             <div class="input-field col s9">
               <input id="prix" name="prix" type="number" class="validate" value=<?php echo $information['prix'] ?>>
-              <label for="prix" data-error="wrong" data-success="right">Prix</label>
+              <label for="prix" data-error="wrong" data-success="right">Prix (champs non obligatoire)</label>
             </div>
           </div>
           <input type="hidden" name="id_activite" id="id_activite" value=<?php echo $information['id_activite'] ?>>
