@@ -81,10 +81,12 @@
 
                 else{
                  if($categorie == $ligne['id_categorie'] or $ligne['id_categorie'] == 5){
-                        echo "<tr class = grey";
-
-
-                        echo ">";
+                        if($nbinscrit == $ligne['place']){
+                          echo "<tr class = grey>"
+                        }
+                        else{
+                          echo "<tr>";
+                        }
                         echo "<td> $ligne[nom_activite]</td>";
                         echo "<td> $ligne[date_activite]</td>";
                         echo "<td> $ligne[description]</td>";
