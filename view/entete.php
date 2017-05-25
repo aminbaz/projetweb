@@ -4,7 +4,7 @@
   <nav>
     <div class="nav-wrapper grey">
       <a href="Accueil.php" class="brand-logo">Centre social de Naillac</a>
-      <a href="Accueil.php" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a href="Accueil.php" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">toc</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="Accueil.php">Accueil</a></li>
 		<?php if(isConnected() and isAdmin()){?><li><a href="Espace.php">Gestion</a></li><?php } ?>
