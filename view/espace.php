@@ -59,7 +59,7 @@
     </div>
     
 
-    
+    <div class="container">
       <div class="row z-depth-4 grey lighten-5">
        <form  method="post" action="Modification_Utilisateur.php">
           <h5 class="center-align">Changement donnée d'un utilisateur</h5>
@@ -75,9 +75,7 @@
               </div>
             </div>
         </form>
-
-
-        
+      </div>
       </div>
 
 <?php require ("view/importscript.php");?>
