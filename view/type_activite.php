@@ -29,7 +29,7 @@
             while($ligne=$information->fetch()){
                 if(isAdmin() or isAnimateur()){
                   $responsable = Get_Responsable_Activite($ligne['id_activite']);
-                  $nbinscrit = Nombre_Inscrit($ligne['id_activite']);
+                  //$nbinscrit = Nombre_Inscrit($ligne['id_activite']);
                   echo "<tr>";
                         echo "<td> $ligne[nom_activite]</td>";
                         echo "<td> $ligne[date_activite]</td>";
