@@ -19,7 +19,7 @@
 				require_once('pdo.php');
 				$bd=connexion();
 
-				$req = $bd->prepare("SELECT * FROM message WHERE date_message > current_date - 5");
+				$req = $bd->prepare("SELECT * FROM message WHERE date_message > current_date - 5 ORDER BY date_message DESC");
 				$req->execute();;
 
 				return $req;
@@ -30,7 +30,7 @@
 				require_once('pdo.php');
 				$bd=connexion();
 
-				$req = $bd->prepare("SELECT * FROM message WHERE id_message = :idMessage");
+				$req = $bd->prepare("SELECT * FROM message WHERE id_message = :idMessage ");
 				$req->bindParam(':idMessage',$idMessage);
 
 				$req->execute();

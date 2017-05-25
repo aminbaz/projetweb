@@ -32,7 +32,7 @@
                 if(isAdmin() or isAnimateur()){
                   $responsable = Get_Responsable_Activite($ligne['id_activite']);
                        if($nbinscrit[0] == $ligne['place']){
-                          echo "<tr class = 'brown lighten-5'>";
+                          echo "<tr class = 'brown lighten-4'>";
                         }
                         else{
                           echo "<tr>";
@@ -87,7 +87,7 @@
                 else{
                  if($categorie == $ligne['id_categorie'] or $ligne['id_categorie'] == 5){
                         if($nbinscrit[0] == $ligne['place']){
-                          echo "<tr class = 'brown lighten-5'>";
+                          echo "<tr class = 'brown lighten-4'>";
                         }
                         else{
                           echo "<tr>";

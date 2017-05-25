@@ -24,7 +24,7 @@
               <tbody>
                 <?php 
                   while($ligne=$information->fetch()){
-                    echo "<tr>";
+                      echo "<tr>";
                       echo "<td> $ligne[lib_message]</td>";
                       echo "<td> $ligne[texte_message]</td>";
                       if (isAdmin()){
@@ -35,6 +35,7 @@
                         echo "Supprimer";
                         echo "</a></td>";
                       }
+                      echo "</tr>";
                     }
                     ?>
               </tbody>
