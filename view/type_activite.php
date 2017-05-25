@@ -18,6 +18,7 @@
               <th>Prix</th>
               <?php if(isAdmin()){
                 echo "<th>Responsable</th>";
+                echo "<th>Nombre Inscription</th>";
               }
               ?>
           </tr>
@@ -28,6 +29,7 @@
             while($ligne=$information->fetch()){
                 if(isAdmin() or isAnimateur()){
                   $responsable = Get_Responsable_Activite($ligne['id_activite']);
+                  $nbinscrit = Nombre_Inscrit($ligne['id_activite']);
                   echo "<tr>";
                         echo "<td> $ligne[nom_activite]</td>";
                         echo "<td> $ligne[date_activite]</td>";
@@ -41,6 +43,7 @@
                               else{
                                 echo "<td></td>";
                               }
+                              echo "<td>$nbinscrit</td>";
                               echo "<td> <a href='Modification_Activite.php?id_activite=$ligne[id_activite]'>";
                               echo "Modifier";
                               echo "</a></td>";
