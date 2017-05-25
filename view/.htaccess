@@ -5,3 +5,11 @@ Options +FollowSymlinks
 RewriteEngine on
 
 RewriteRule ^/accueil$ accueil.php [L]
+RewriteRule ^/activite$ activite.php [L]
+RewriteRule ^/activite$ activite_spec.php [L]
+RewriteRule ^/connexion$ connexion.php [L]
+RewriteRule ^/gestion$ espace.php [L]
+RewriteRule ^/inscription$ inscription.php [L]
+RewriteRule ^/modification$ modification_Activite.php [L]
+RewriteRule ^/modification$ modification_Message.php [L]
+RewriteRule ^/modification$ modification_Utilisateur.php [L]
