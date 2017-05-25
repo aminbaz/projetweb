@@ -4,7 +4,7 @@
 				require_once('pdo.php');
 				$bd=connexion();
 				
-				$req = $bd->prepare("SELECT * FROM activite WHERE id_activite = :idActivite ORDER BY date_activite DESC");
+				$req = $bd->prepare("SELECT * FROM activite WHERE id_activite = :idActivite ORDER BY date_activite ASC");
 				$req->bindParam(':idActivite',$idActivite);
 
 				$req->execute();
@@ -12,13 +12,23 @@
 				return $req;
 			}
 
+	function Get_All_Activite(){
+
+				require_once('pdo.php');
+				$bd=connexion();
+				
+				$req = $bd->prepare("SELECT * FROM activite");
+				$req->execute();
+
+				return $req;
+			}
 
 	function Get_Activite_Type($id_type){
 
 				require_once('pdo.php');
 				$bd=connexion();
 
-				$req = $bd->prepare("SELECT * FROM activite WHERE id_type = :id_type ORDER BY date_activite DESC");
+				$req = $bd->prepare("SELECT * FROM activite WHERE id_type = :id_type ORDER BY date_activite ASC");
 				$req->bindParam(':id_type',$id_type);
 
 				$req->execute();
