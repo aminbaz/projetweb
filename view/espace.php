@@ -29,7 +29,7 @@
           </div>
         </form>
       
-        <form class="col s12" method="post" action="Publication.php">
+        <form  method="post" action="Publication.php">
         <div class="col m6">
         <h5 class="center-align">Publier un message</h5>
           <div class="row">
@@ -56,6 +56,7 @@
      
 
       </div>
+    </div>
     
 
     
@@ -78,7 +79,6 @@
 
         
       </div>
-    </div>
 
 <?php require ("view/importscript.php");?>
   </body>
