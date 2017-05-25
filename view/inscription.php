@@ -23,10 +23,10 @@
 
            <div class="row"> 
             <div class="input-field col s9">
-              <select>
+              <select name="sexe">
                 <option value="" disabled selected>Choisir</option>
-                <option name="sexe" value="homme">Homme</option>
-                <option name="sexe" value="femme">Femme</option>
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
               </select>
               <label>Sexe</label>
             </div>
