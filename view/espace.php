@@ -30,6 +30,7 @@
         </form>
       
         <form class="col s12" method="post" action="Publication.php">
+        <div class="col m6">
         <h5 class="center-align">Publier un message</h5>
           <div class="row">
             <div class="input-field col s9">
@@ -48,6 +49,7 @@
               <button class="btn waves-effect waves-light grey" type="submit" name="action" value="valider">Publier</button>
             </div>
           </div>
+          </div>
         </form>
 
    
@@ -59,7 +61,6 @@
     
       <div class="row z-depth-4 grey lighten-5">
        <form  method="post" action="Modification_Utilisateur.php">
-         <div class="col m6">
           <h5 class="center-align">Changement donnée d'un utilisateur</h5>
             <div class="row">
               <div class="input-field col s9">
@@ -72,7 +73,6 @@
                 <button class="btn waves-effect waves-light grey" type="submit" name="action" value="valider">Changement</button>
               </div>
             </div>
-          </div>
         </form>
 
 
