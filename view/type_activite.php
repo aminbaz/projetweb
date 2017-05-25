@@ -81,7 +81,7 @@
 
                 else{
                  if($categorie == $ligne['id_categorie'] or $ligne['id_categorie'] == 5){
-                        if($nbinscrit == $ligne['place']){
+                        if($nbinscrit[0] == $ligne['place']){
                           echo "<tr class = 'grey'>";
                         }
                         else{
@@ -95,15 +95,18 @@
                         echo "<td> <a href='Liste_Inscrit.php?id_activite=$ligne[id_activite]'>";
                         echo "$nbinscrit[0]";
                         echo "</a></td>";
-                            if(empty(Check_Inscription($cookieId,$ligne['id_activite']))){
+                            if(empty(Check_Inscription($cookieId,$ligne['id_activite'])) and $nbinscrit[0] <= $ligne['place']){
                                   echo "<td> <a href='Inscription_Activite.php?id_activite=$ligne[id_activite]'>";
                                   echo "S'inscrire";
                                   echo "</a></td>";
                             }
-                            else{
+                            elseif(!empty(Check_Inscription($cookieId,$ligne['id_activite'])) and $nbinscrit[0] <= $ligne['place']){
                                   echo "<td> <a href='Desinscription_Activite.php?id_activite=$ligne[id_activite]'>";
                                   echo "Désinscription";
                                   echo "</a></td>";
+                            }
+                            else{
+                              echo "<td>Complet</td>";
                             }
                       }
                       echo "</tr>";
