@@ -29,31 +29,6 @@
           </div>
         </form>
       
-    
-
-   
-     
-        <form  method="post" action="Modification_Utilisateur.php">
-         <div class="col m6">
-          <h5 class="center-align">Changement donnée d'un utilisateur</h5>
-            <div class="row">
-              <div class="input-field col s9">
-                <input id="email" name="email" type="email" class="validate">
-                <label for="email" data-error="wrong" data-success="right">Email</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s9">
-                <button class="btn waves-effect waves-light grey" type="submit" name="action" value="valider">Changement</button>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    
-
-    
-      <div class="row z-depth-4 grey lighten-5">
         <form class="col s12" method="post" action="Publication.php">
         <h5 class="center-align">Publier un message</h5>
           <div class="row">
@@ -74,6 +49,34 @@
             </div>
           </div>
         </form>
+
+   
+     
+
+      </div>
+    
+
+    
+      <div class="row z-depth-4 grey lighten-5">
+       <form  method="post" action="Modification_Utilisateur.php">
+         <div class="col m6">
+          <h5 class="center-align">Changement donnée d'un utilisateur</h5>
+            <div class="row">
+              <div class="input-field col s9">
+                <input id="email" name="email" type="email" class="validate">
+                <label for="email" data-error="wrong" data-success="right">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s9">
+                <button class="btn waves-effect waves-light grey" type="submit" name="action" value="valider">Changement</button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+
+        
       </div>
     </div>
 
