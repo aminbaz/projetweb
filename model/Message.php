@@ -19,7 +19,7 @@
 				require_once('pdo.php');
 				$bd=connexion();
 
-				$req = $bd->prepare("SELECT * FROM message WHERE date_message > current_date - 5 ORDER BY date_message DESC");
+				$req = $bd->prepare("SELECT * FROM message WHERE date_message < current_date - 5 ORDER BY date_message DESC");
 				$req->execute();;
 
 				return $req;
