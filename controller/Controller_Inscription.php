@@ -12,7 +12,7 @@
 
 	$mailverif=Check_Mail($mail);
 
-	if (empty($nom) || empty($prenom) || empty($sexe)  || empty($password) || empty($password_check) || empty($mail) ) {
+	if (empty($nom) || empty($prenom) || empty($password) || empty($password_check) || empty($mail) ) {
 		echo "<h3>Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! </h3>";
 	}
 	elseif (strlen($password)<6) {
