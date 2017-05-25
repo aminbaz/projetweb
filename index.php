@@ -1,4 +1,3 @@
 <?php 
-	require_once("Accueil.php");
-	
+	require_once("view/accueil.php");	
 ?>
