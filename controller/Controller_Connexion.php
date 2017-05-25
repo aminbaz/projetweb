@@ -20,7 +20,7 @@ else
 
 		setcookie("codeconnexion", $cookiecode, time()+(3600), "/");
 
-		header("Location: ../Accueil.php");
+		header("Location: ../view/accueil.php");
 	}
 	else
 	{

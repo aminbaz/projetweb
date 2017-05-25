@@ -1,4 +1,4 @@
 <?php
 setcookie("codeconnexion","", time() , "/");
-header("Location: Accueil.php");
+header("Location: view/accueil.php");
 ?>
