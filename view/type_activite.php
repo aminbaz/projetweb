@@ -43,7 +43,7 @@
                               else{
                                 echo "<td></td>";
                               }
-                              echo "<td>$nbinscrit</td>";
+                              echo "<td>$nbinscrit[0]</td>";
                               echo "<td> <a href='Modification_Activite.php?id_activite=$ligne[id_activite]'>";
                               echo "Modifier";
                               echo "</a></td>";
