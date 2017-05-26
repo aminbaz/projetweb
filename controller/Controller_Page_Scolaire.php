@@ -12,4 +12,4 @@
 	$categorie = Get_User_Categorie($cookieId);
 	
 	require "view/type_activite.php";
-?>
+?> 

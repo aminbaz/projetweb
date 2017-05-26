@@ -8,4 +8,4 @@
 	$idActivite = $_GET['id_activite'];
 	Delete_Inscription($idUtilisateur,$idActivite);
 	header("Location: Activite.php");
-?>
+?> 

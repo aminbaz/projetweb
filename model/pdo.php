@@ -18,4 +18,4 @@ function connexion(){
 	}
 	return($bd);
 }
-?>
+?> 

@@ -4,4 +4,4 @@
 	$information = Get_Activite($idActivite)->fetch();
 	require "view/modification_Activite.php";
 
-?>
+?> 

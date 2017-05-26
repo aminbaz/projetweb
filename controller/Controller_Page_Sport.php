@@ -13,4 +13,4 @@
 	
 	
 	require_once ("view/type_activite.php");
-?>
+?> 

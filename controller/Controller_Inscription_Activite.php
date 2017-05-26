@@ -4,4 +4,4 @@
 	$idActivite = $_GET['id_activite'];
 	Add_Inscription($idUtilisateur,$idActivite);
 	header("Location: Activite.php");
-?>
+?> 

@@ -1,6 +1,6 @@
  <?php
 	require_once ('../model/Activite.php');
-
+  
 	//récupération de toutes les saisies du formulaire d'ajout d'activité
 	$nom = htmlspecialchars($_POST['nom']);
 	$dateAct = htmlspecialchars($_POST['dateactivite']);

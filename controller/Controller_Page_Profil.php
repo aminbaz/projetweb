@@ -5,4 +5,4 @@ $cookieId = $_COOKIE['codeconnexion'];
 $information = Get_User($cookieId);
 
 require "view/profil.php";
-?>
+?> 

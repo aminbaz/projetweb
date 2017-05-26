@@ -1,7 +1,7 @@
 <?php
 	require_once ('../model/Utilisateur.php');
 
-	
+	 
 	$password = htmlspecialchars($_POST['password']);
 	$password_check = htmlspecialchars($_POST['password_check']);
 	$cookieId = $_COOKIE['codeconnexion'];

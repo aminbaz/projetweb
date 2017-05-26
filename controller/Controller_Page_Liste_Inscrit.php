@@ -5,4 +5,4 @@
 	$information=Liste_Inscription($idActivite);
 	require "view/liste_Inscrit.php";
 
-?>
+?> 

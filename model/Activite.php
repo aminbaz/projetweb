@@ -13,7 +13,7 @@
 
 				return $req;
 			}
-
+ 
 	function Get_Activite_Type($id_type){
 				//Fonction permettant de récupérer toutes les activité selon un type
 				//Identifiant du type souhaité

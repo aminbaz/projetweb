@@ -29,7 +29,7 @@
 				return $req;
 			}
 
-
+ 
 	function Update_Message($id,$titre,$texte,$date){
 				//Fonction permettant de modifier un message on lui réacfectant toutes les caractéristiques
 				

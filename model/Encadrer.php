@@ -27,7 +27,7 @@
 
 					$req->execute();
 				}
-
+ 
 
 	function Check_Encadrement($idUser,$idActivite){
 					//Fonction permetant de vérifier si une activité ou un animateur encadre une activité

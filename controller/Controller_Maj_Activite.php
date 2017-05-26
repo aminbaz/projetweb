@@ -19,4 +19,4 @@ require_once ("../model/Activite.php");
 		header("location: ../Activite.php");
 	}
 
-?>
+?> 

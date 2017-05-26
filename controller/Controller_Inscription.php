@@ -14,7 +14,7 @@
 
 	if (empty($nom) || empty($prenom) || empty($sexe) || empty($datenaiss) || empty($password) || empty($password_check) || empty($mail) ) {
 		echo "<h3>Vous n'avez pas remplis tous les champs ! Merci de completer les champs manquants ! </h3>";
-	}
+	} 
 	elseif (strlen($password)<6) {
 		echo "<h3>Votre mot de passe doit faire plus de 6 caractères </h3>";
 	}

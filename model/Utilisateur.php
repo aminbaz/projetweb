@@ -16,7 +16,7 @@
 
 				return $data;
 			}
-
+ 
 			function Check_Password($userPassword,$userMail){
 				//Fonction permettant de vérifier si le mot de passe appartient bien au mail qui est unique
 				//Prends en argument le mot de passe et le mail de l'utilisateur

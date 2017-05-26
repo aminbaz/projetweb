@@ -6,4 +6,4 @@ require_once ("model/Utilisateur.php");
 	$information = Get_User($id);
 require "view/modification_Utilisateur.php";
 
-?>
+?> 

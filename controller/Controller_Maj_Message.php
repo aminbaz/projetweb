@@ -17,4 +17,4 @@ require_once ("../model/Message.php");
 		header("location: ../Accueil.php");
 	}
 
-?>
+?> 

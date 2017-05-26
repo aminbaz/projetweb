@@ -26,7 +26,7 @@
 					$req->bindParam(':idActivite',$idActivite);
 
 					$req->execute();
-				}
+ 				}
 
 
 	function Check_Inscription($idUser,$idActivite){

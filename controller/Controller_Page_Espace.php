@@ -6,4 +6,4 @@ require_once ("model/Utilisateur.php");
 $cookieId = $_COOKIE['codeconnexion'];
 
 require "view/espace.php";
-?>
+?> 

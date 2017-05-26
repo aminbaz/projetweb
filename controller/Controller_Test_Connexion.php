@@ -4,6 +4,7 @@ require_once ("model/Role.php");
 
 	function isConnected()
 	{
+		//Indique si un utilisateur est connecté.
 		if (isset($_COOKIE["codeconnexion"]))
 		{
 			
@@ -21,22 +22,25 @@ require_once ("model/Role.php");
 		else
 		{
 			
-			return false;
+			return false; 
 		}
 }
-//Indique si un utilisateur est connecté.
+
 
 function onlineOnly()
 {
+	//Pour les pages autorisées seulement par les utilisateurs connectés
+	//renvoi à la connexion sinon
 	if(!isConnected())
 	{
 		header("Location: Connexion.php");
 	}
 }
-//Pour les pages autorisées seulement par les utilisateurs connectés. Renvoie à la connexion sinon
 
 function offlineOnly()
 {
+	//Pour les pages autorisées seulement par les utilisateurs au non connectés
+	//renvoi à la connexion sinon
 	if(isConnected())
 	{
 		header("Location: Accueil.php");
@@ -45,6 +49,8 @@ function offlineOnly()
 
 function isAdmin()
 {
+	//Fonction permettant de savoir si un l'utilisateur est un administrateur
+	//renvoi un booleen vrai s'il l'est
 	if(isConnected())
 	{
 		$userId = $_COOKIE["codeconnexion"];
@@ -66,6 +72,8 @@ function isAdmin()
 
 function isAnimateur()
 {
+	//Fonction permettant de savoir si un l'utilisateur est un animateur
+	//renvoi un booleen vrai s'il l'est
 	if(isConnected())
 	{
 		$userId = $_COOKIE["codeconnexion"];

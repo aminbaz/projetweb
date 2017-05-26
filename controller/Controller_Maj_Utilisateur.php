@@ -18,4 +18,4 @@ require_once ("../model/Utilisateur.php");
 		header("location: ../Espace.php");
 	}
 
-?>
+?> 

@@ -9,4 +9,4 @@
 	$information = Get_Activite_Type(5);
 	
 	require "view/type_activite.php";
-?>
+?> 

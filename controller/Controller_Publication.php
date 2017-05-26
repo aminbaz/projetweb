@@ -14,4 +14,4 @@
 		Add_Message($id,$titre,$texte,$date);
 	}
 	header("Location: Accueil.php");
-?>
+?> 
